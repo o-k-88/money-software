@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Box, Container, Grid, Typography, Button, Paper } from "@mui/material";
 // import Carousel from "../components/Carousel/Carousel";
-import book from "./images/book.jpg";
 
 const Homepage = () => {
   return (
