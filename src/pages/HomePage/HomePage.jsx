@@ -1,74 +1,168 @@
 import React from "react";
-import styled from "styled-components";
-import { Box, Container, Grid, Typography, Button, Paper } from "@mui/material";
-// import Carousel from "../components/Carousel/Carousel";
+import { Box, Container, Typography, Grid, Button } from "@mui/material";
+import road from "./images/road.svg";
+import CustomSlider from "../../components/Carousel/CustomSlider";
+import book from "./images/book.jpg";
+
+const feedbacks = [
+  {
+    id: 1,
+    name: "John Doe",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Ron Doe1",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Bob Doe2",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Nate Doe3",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 5,
+  },
+];
 
 const Homepage = () => {
   return (
     <>
-      <Box component="section" sx={{ py: 8, backgroundColor: "grey.100" }}>
+      <Box
+        component="section"
+        sx={{
+          py: 8,
+          backgroundImage: `url(${book})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          height: "100%",
+        }}
+      >
         <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="center">
-            {/* Left Column - Text */}
+          <Typography
+            variant="h1"
+            align="center"
+            sx={{
+              fontWeight: 700,
+              fontSize: "4rem", // Increased font size
+              lineHeight: 1.3,
+              letterSpacing: "2px", // Adds spacing between letters
+              color: "primary.main", // Primary color from your theme
+              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)", // Subtle text shadow for depth
+              mb: 3, // Margin bottom
+            }}
+            gutterBottom
+          >
+            Money Software
+          </Typography>
+
+          <Typography
+            variant="h2"
+            align="center"
+            sx={{
+              fontWeight: 400,
+              fontSize: "2rem", // Slightly bigger for emphasis
+              lineHeight: 1.4,
+              color: "text.secondary", // Secondary text color for contrast
+              fontStyle: "italic", // Adds an italicized style to make it distinct
+              textTransform: "uppercase", // Uppercase for a more dramatic look
+              letterSpacing: "1px", // Adds spacing between letters
+              mb: 4, // Larger margin bottom
+            }}
+            gutterBottom
+          >
+            By Andrei Kirilenko
+          </Typography>
+        </Container>
+      </Box>
+      <Box component="section" sx={{ py: { xs: 6, md: 10 } }}>
+        <Container maxWidth="xl">
+          <Grid container spacing={4} justifyContent="center" alignItems="center">
+            {/* Text Content */}
             <Grid item xs={12} md={6}>
-              <Typography variant="h3" fontWeight="bold" gutterBottom>
-                Money is Software by Andrei Kirilenko 📚
+              <Typography
+                variant="h3"
+                sx={{
+                  fontWeight: 700,
+                  mb: 3,
+                  fontSize: { xs: "2rem", md: "2.5rem" },
+                }}
+              >
+                The Book Chapter
               </Typography>
-              <Typography variant="body1" color="text.secondary" paragraph>
-                Explore a world of captivating stories, insightful non-fiction, and timeless
-                classics. Find books that inspire, entertain, and educate.
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 4,
+                  color: "text.secondary",
+                  lineHeight: 1.6,
+                }}
+              >
+                Discover <strong>The Stoic Capitalist</strong>, where Robert Rosenkranz bridges
+                ancient Stoic wisdom with modern capitalist strategies to reveal a powerful approach
+                to success and fulfillment. Learn how rational decision-making, resilience, and
+                purpose can transform your life and business.
               </Typography>
-              <Button variant="contained" color="primary" size="large">
-                Browse Books
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                sx={{
+                  color: "white",
+                  px: 4,
+                  py: 1.5,
+                  textTransform: "none",
+                  fontSize: "1rem",
+                  fontWeight: 600,
+                  transition: "background-color 0.3s ease",
+                  "&:hover": { backgroundColor: "primary.dark" },
+                }}
+              >
+                Learn More
               </Button>
             </Grid>
 
-            {/* Right Column - Image */}
+            {/* Image Section */}
             <Grid item xs={12} md={6}>
               <Box
                 component="img"
-                src="https://placehold.co/450x300" // Replace with actual book image
-                alt="Books"
+                src="https://placehold.co/600x400"
+                alt="Book Cover"
                 sx={{
                   width: "100%",
-                  borderRadius: 2,
-                  boxShadow: 3,
+                  height: "auto",
+                  borderRadius: "12px",
+                  boxShadow: 4,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                    boxShadow: 6,
+                  },
                 }}
               />
             </Grid>
           </Grid>
         </Container>
       </Box>
-      <Box component="section" sx={{ py: 8, backgroundColor: "grey.50" }}>
-        <Container maxWidth="md">
-          <Paper sx={{ padding: 4, boxShadow: 3, borderRadius: 2 }}>
-            {/* Chapter Title */}
-            <Typography variant="h4" fontWeight="bold" gutterBottom>
-              Chapter 1: The Journey Begins 🚀
-            </Typography>
-
-            {/* Chapter Content (Excerpt) */}
-            <Typography variant="body1" color="text.secondary" paragraph>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, esse aliquam.
-              Perspiciatis facere dolor placeat reprehenderit consequuntur consectetur quas earum
-              eligendi, facilis mollitia numquam voluptatum!...
-            </Typography>
-
-            {/* Read More Button */}
-            <Button variant="contained" color="primary" size="large">
-              Read More
-            </Button>
-          </Paper>
+      <Box component="section">
+        <Container maxWidth="xl">
+          <CustomSlider feedbacks={feedbacks} />
         </Container>
       </Box>
-      <Box component="section">
-        <Container maxWidth="lg">
-          <Typography>Author</Typography>
-        </Container>
-      </Box>
-      <Box component="section">
-        <Container maxWidth="lg">
-          <Typography>Where to buy</Typography>
+
+      <Box sx={{ py: 8 }}>
+        <Container maxWidth="lg" sx={{ textAlign: "center" }}>
+          <img src={road} alt="Road illustration" style={{ maxWidth: "100%", height: "auto" }} />
         </Container>
       </Box>
     </>

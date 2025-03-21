@@ -9,6 +9,15 @@ const theme = createTheme({
   typography: {
     fontFamily: "'Inter', sans-serif",
   },
+  palette: {
+    primary: {
+      main: "#49ca8a",
+    },
+    text: {
+      primary: "#000000",
+      secondary: "#666666",
+    },
+  },
 });
 createRoot(document.getElementById("root")).render(
   <StrictMode>

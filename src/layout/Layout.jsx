@@ -8,11 +8,9 @@ const Layout = () => {
   return (
     <>
       <Header />
-
-      <Box component="main">
+      <Box component="main" sx={{ position: "relative" }}>
         <Outlet />
       </Box>
-
       <Footer />
     </>
   );
