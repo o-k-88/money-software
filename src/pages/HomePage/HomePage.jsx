@@ -100,7 +100,7 @@ const Homepage = () => {
         <Container maxWidth="xl">
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
-              <Typography variant="h3" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
+              <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
                 What's Inside
               </Typography>
               <Typography variant="body1" sx={{ color: "text.secondary", lineHeight: 1.6, mb: 4 }}>
@@ -154,7 +154,7 @@ const Homepage = () => {
       </Box>
       <Box component="section" id="author" sx={{ py: { xs: 6, md: 10 } }}>
         <Container maxWidth="xl">
-          <Typography variant="h3" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
+          <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
             About The Author
           </Typography>
 
@@ -194,6 +194,7 @@ const Homepage = () => {
                 src={andreiImg}
                 alt="Author Image"
                 sx={{
+                  width: "100%",
                   height: "auto",
                   borderRadius: "12px",
                   boxShadow: 4,
@@ -211,7 +212,10 @@ const Homepage = () => {
 
       <Box component="section" id="reviews" sx={{ py: { xs: 6, md: 10 } }}>
         <Container maxWidth="xl">
-          <Typography variant="h3" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 700, color: "primary.main", mb: 3, paddingLeft: "20px" }}
+          >
             What Readers Say
           </Typography>
           <CustomSlider feedbacks={feedbacks} />
