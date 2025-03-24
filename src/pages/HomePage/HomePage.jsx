@@ -38,7 +38,8 @@ const Homepage = () => {
               fontSize: { xs: "2.5rem", md: "4rem" }, // Responsive font sizes
               lineHeight: 1.3,
               letterSpacing: "1.5px",
-              color: "primary.main",
+              // color: "primary.main",
+              color: "secondary.main",
               textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
               mb: 3,
             }}
