@@ -21,7 +21,12 @@ const Header = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const navLinks = ["Home", "Chapters", "About", "Contact"];
+  const navLinks = [
+    { title: "Home", href: "#home" },
+    { title: "Chapter", href: "#chapter" },
+    { title: "Author", href: "#author" },
+    { title: "Reviews", href: "#reviews" },
+  ];
 
   return (
     <>
@@ -36,8 +41,8 @@ const Header = () => {
           {/* Desktop Navigation */}
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             {navLinks.map((link) => (
-              <Button key={link} color="inherit" sx={{ mx: 1 }}>
-                {link}
+              <Button key={link.title} href={link.href} color="inherit" sx={{ mx: 1 }}>
+                {link.title}
               </Button>
             ))}
             <Button variant="contained" color="secondary">
