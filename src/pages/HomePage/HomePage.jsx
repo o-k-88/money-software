@@ -139,8 +139,35 @@ const Homepage = () => {
 
           <Grid container spacing={4} justifyContent="center" alignItems="center">
             <Grid item xs={12} md={6}>
-              <Typography variant="h2">Andrei Kirilenko</Typography>
-              <Typography variant="h5" sx={{ mb: 2 }}>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontWeight: 700,
+                  fontSize: { xs: "2.5rem", md: "3.5rem" }, // Responsive font size
+                  color: "secondary.main", // Emphasize with primary color
+                  textTransform: "uppercase", // Professional look
+                  letterSpacing: "1.5px", // Adds spacing for readability
+                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)", // Soft shadow effect
+                  mb: 1.5, // Bottom margin for spacing
+                }}
+              >
+                Andrei Kirilenko
+              </Typography>
+
+              <Typography
+                variant="h5"
+                sx={{
+                  fontWeight: 400,
+                  fontSize: { xs: "1.25rem", md: "1.75rem" }, // Adjust size for devices
+                  color: "text.secondary", // Subtle contrast
+                  fontStyle: "italic", // Stylish italic touch
+                  letterSpacing: "0.8px", // Slightly more spacing
+                  borderLeft: "4px solid", // Decorative left border
+                  borderColor: "secondary.main", // Matches theme
+                  pl: 2, // Padding for spacing after border
+                  mb: 2, // Margin bottom
+                }}
+              >
                 Professor in Finance, Cambridge Judge Business School
               </Typography>
               <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
