@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography, Link, IconButton } from "@mui/material";
 import { Facebook, Twitter, Instagram } from "@mui/icons-material";
+import { navLinks } from "../../helpers/links";
 
 const Footer = () => {
   return (
@@ -19,9 +20,15 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <Grid item xs={12} md={4} textAlign="center">
-            {["Home", "Chapters", "About", "Contact"].map((text) => (
-              <Link key={text} href="#" color="inherit" underline="none" sx={{ mx: 1 }}>
-                {text}
+            {navLinks.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                color="inherit"
+                underline="none"
+                sx={{ mx: 1 }}
+              >
+                {link.title}
               </Link>
             ))}
           </Grid>

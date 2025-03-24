@@ -14,19 +14,14 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
+import { navLinks } from "../../helpers/links";
+
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  const navLinks = [
-    { title: "Home", href: "#home" },
-    { title: "Chapter", href: "#chapter" },
-    { title: "Author", href: "#author" },
-    { title: "Reviews", href: "#reviews" },
-  ];
 
   return (
     <>
