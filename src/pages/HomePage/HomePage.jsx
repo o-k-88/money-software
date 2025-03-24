@@ -13,37 +13,7 @@ import CustomSlider from "../../components/Carousel/CustomSlider";
 import bookImg from "./images/book.jpg";
 import andreiImg from "./images/andrei-kirilenko.jpg";
 import chapterImg from "./images/chapter-image.jpg";
-
-const feedbacks = [
-  {
-    id: 1,
-    name: "John Doe",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: "Ron Doe1",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: "Bob Doe2",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: "Nate Doe3",
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    description: "Lorem10 ipsum dolor sit amet, consectetur adipiscing elit.",
-    rating: 5,
-  },
-];
+import { REVIEWS } from "../../helpers/feedbacks";
 
 const Homepage = () => {
   return (
@@ -61,18 +31,17 @@ const Homepage = () => {
       >
         <Container maxWidth="lg">
           <Typography
-            variant="h1"
+            variant="h2" // Change from h1 to h2 for better balance
             align="center"
             sx={{
               fontWeight: 700,
-              fontSize: "4rem", // Increased font size
+              fontSize: { xs: "2.5rem", md: "4rem" }, // Responsive font sizes
               lineHeight: 1.3,
-              letterSpacing: "2px", // Adds spacing between letters
-              color: "primary.main", // Primary color from your theme
-              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)", // Subtle text shadow for depth
-              mb: 3, // Margin bottom
+              letterSpacing: "1.5px",
+              color: "primary.main",
+              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
+              mb: 3,
             }}
-            gutterBottom
           >
             Money Software
           </Typography>
@@ -122,30 +91,40 @@ const Homepage = () => {
               </Button>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Accordion>
+              <Accordion sx={{ bgcolor: "grey.100" }}>
+                {/* Light background */}
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1-content"
                   id="panel1-header"
                 >
-                  <Typography component="span">Chapter 1</Typography>
+                  <Typography component="span" sx={{ fontWeight: 600 }}>
+                    📖 Chapter 1 - Introduction
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-                  lacus ex, sit amet blandit leo lobortis eget.
+                  <Typography variant="body2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+                    lacus ex, sit amet blandit leo lobortis eget.
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
-              <Accordion>
+              <Accordion sx={{ bgcolor: "grey.100" }}>
+                {/* Light background */}
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel2-content"
                   id="panel2-header"
                 >
-                  <Typography component="span">Chapter 2</Typography>
+                  <Typography component="span" sx={{ fontWeight: 600 }}>
+                    📖 Chapter 2 - Lorem ipsun
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-                  lacus ex, sit amet blandit leo lobortis eget.
+                  <Typography variant="body2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
+                    lacus ex, sit amet blandit leo lobortis eget.
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -164,28 +143,19 @@ const Homepage = () => {
               <Typography variant="h5" sx={{ mb: 2 }}>
                 Professor in Finance, Cambridge Judge Business School
               </Typography>
-              <Typography
-                variant="body1"
-                sx={{
-                  mb: 4,
-                  color: "text.secondary",
-                  lineHeight: 1.6,
-                }}
-              >
+              <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
                 Andrei Kirilenko is a Reader (Associate Professor) in Finance at the Cambridge Judge
-                Business School, the Founding Director of the Cambridge Centre for Finance,
-                Technology and Regulation, and a Research Fellow in the Financial Economics
-                Programme of the Centre for Economic Policy Research (CEPR). Prior to joining the
-                University of Cambridge Judge Business School in 2019, he was the Director of the
-                Centre for Global Finance and Technology at the Imperial College Business School.
-                Prior to joining Imperial in 2015, he was a Professor of the Practice of Finance at
-                MIT Sloan and Co-Director of the MIT Center for Finance and Policy. Prior to MIT,
-                Kirilenko served (2010-2012) as Chief Economist of the U.S. Commodity Futures
-                Trading Commission (CFTC) where he used modern analytical tools and methods to
-                design and enforce an effective regulatory regime of financial markets. Before CFTC
-                Kirilenko spent twelve years at the International Monetary Fund working on financial
-                crises around the world. Andrei received his PhD in Economics from the University of
-                Pennsylvania with a specialization in Finance from the Wharton School.
+                Business School and the Founding Director of the Cambridge Centre for Finance,
+                Technology, and Regulation.
+              </Typography>
+              <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
+                He previously worked at MIT Sloan, Imperial College, and the U.S. Commodity Futures
+                Trading Commission (CFTC), using advanced analytical methods for financial
+                regulations.
+              </Typography>
+              <Typography variant="body1" sx={{ color: "text.secondary", lineHeight: 1.6 }}>
+                Andrei holds a PhD in Economics from the University of Pennsylvania with a
+                specialization in Finance from the Wharton School.
               </Typography>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -193,10 +163,12 @@ const Homepage = () => {
                 component="img"
                 src={andreiImg}
                 alt="Author Image"
+                loading="lazy"
                 sx={{
                   width: "100%",
                   height: "auto",
                   borderRadius: "12px",
+                  objectFit: "cover",
                   boxShadow: 4,
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                   "&:hover": {
@@ -218,7 +190,7 @@ const Homepage = () => {
           >
             What Readers Say
           </Typography>
-          <CustomSlider feedbacks={feedbacks} />
+          <CustomSlider feedbacks={REVIEWS} />
         </Container>
       </Box>
 
