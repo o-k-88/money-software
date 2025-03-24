@@ -62,10 +62,41 @@ const Header = () => {
       <Drawer anchor="left" open={mobileOpen} onClose={handleDrawerToggle}>
         <List sx={{ width: 250 }}>
           {navLinks.map((link) => (
-            <ListItem key={link} disablePadding>
-              <ListItemButton>
-                <ListItemText primary={link} />
-              </ListItemButton>
+            <ListItem
+              key={link.title}
+              disablePadding
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <Button
+                sx={{
+                  color: "text.secondary",
+                  position: "relative",
+                  transition: "color 0.3s ease, transform 0.3s ease",
+                  "&:hover": {
+                    color: "primary.main", // Change text color on hover
+                    transform: "scale(1.05)", // Slight scaling effect
+                  },
+                  "&::after": {
+                    content: '""',
+                    position: "absolute",
+                    width: "100%",
+                    height: "2px",
+                    bottom: 0,
+                    left: 0,
+                    backgroundColor: "primary.main",
+                    transform: "scaleX(0)", // Initially hidden
+                    transformOrigin: "right",
+                    transition: "transform 0.3s ease-out",
+                  },
+                  "&:hover::after": {
+                    transform: "scaleX(1)", // Underline animation
+                    transformOrigin: "left",
+                  },
+                }}
+                href={link.href}
+              >
+                {link.title}
+              </Button>
             </ListItem>
           ))}
         </List>
