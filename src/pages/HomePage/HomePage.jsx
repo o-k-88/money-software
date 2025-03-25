@@ -13,6 +13,9 @@ import CustomSlider from "../../components/Carousel/CustomSlider";
 import bookImg from "./images/book.jpg";
 import andreiImg from "./images/andrei-kirilenko.jpg";
 import chapterImg from "./images/chapter-image.jpg";
+
+import arrows from "./images/arrows-down.png";
+
 import { REVIEWS } from "../../helpers/feedbacks";
 
 const Homepage = () => {
@@ -22,6 +25,7 @@ const Homepage = () => {
         id="home"
         component="section"
         sx={{
+          marginTop: "80px",
           py: 8,
           backgroundImage: `url(${bookImg})`,
           backgroundSize: "cover",
@@ -38,8 +42,8 @@ const Homepage = () => {
               fontSize: { xs: "2.5rem", md: "4rem" }, // Responsive font sizes
               lineHeight: 1.3,
               letterSpacing: "1.5px",
-              // color: "primary.main",
-              color: "secondary.main",
+              // color: "secondary.main",
+              color: "primary.main",
               textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
               mb: 3,
             }}
@@ -66,33 +70,42 @@ const Homepage = () => {
           </Typography>
         </Container>
       </Box>
-      <Box component="section" id="chapter" sx={{ py: { xs: 6, md: 10 } }}>
+      <Box component="section" id="chapter" sx={{ py: { xs: 6, md: 10, position: "relative" } }}>
         <Container maxWidth="xl">
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
                 What's Inside
               </Typography>
-              <Typography variant="body1" sx={{ color: "text.secondary", lineHeight: 1.6, mb: 4 }}>
+              <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
                 Money Software is a comprehensive guide to understanding the world of finance and
                 technology. This book is a must-read for anyone interested in the intersection of
-                finance and technology. It covers a wide range of topics, including blockchain,
-                cryptocurrencies, and algorithmic trading. Whether you are a finance professional
-                looking to stay ahead of the curve or a technology enthusiast curious about the
-                future of finance, Money Software has something for you.
+                finance and technology.
               </Typography>
-              <Button
-                variant="contained"
-                color="secondary"
-                size="large"
-                sx={{ px: 6 }}
-                href="/chapters"
-              >
+
+              <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
+                It covers a wide range of topics, including blockchain, cryptocurrencies, and
+                algorithmic trading. Whether you are a finance professional looking to stay ahead of
+                the curve or a technology enthusiast curious about the future of finance, Money
+                Software has something for you.
+              </Typography>
+              <Button variant="contained" color="secondary" size="large" sx={{ px: 6 }} href="#">
                 Get the Book
               </Button>
+              <Box
+                sx={{
+                  backgroundImage: `url(${arrows})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+
+                  width: "100%",
+                  height: "100%",
+                }}
+              ></Box>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Accordion sx={{ bgcolor: "grey.100" }}>
+              <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
                 {/* Light background */}
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -106,7 +119,17 @@ const Homepage = () => {
                 <AccordionDetails>
                   <Typography variant="body2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-                    lacus ex, sit amet blandit leo lobortis eget.
+                    lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet
+                    <Button
+                      href="#"
+                      sx={{
+                        textTransform: "capitalize",
+                        padding: 0,
+                        marginLeft: 1,
+                      }}
+                    >
+                      Read more
+                    </Button>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -133,7 +156,7 @@ const Homepage = () => {
         </Container>
       </Box>
       <Box component="section" id="author" sx={{ py: { xs: 6, md: 10 } }}>
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
             About The Author
           </Typography>

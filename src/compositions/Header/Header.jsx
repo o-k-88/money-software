@@ -11,6 +11,7 @@ import {
   ListItemButton,
   ListItemText,
   Box,
+  Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -26,36 +27,38 @@ const Header = () => {
   return (
     <>
       {/* App Bar */}
-      <AppBar position="static" color="primary">
-        <Toolbar>
-          {/* Logo / Title */}
-          <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: "bold" }}>
-            📖 Book Website
-          </Typography>
+      <AppBar position="fixed" color="primary" sx={{ py: 1 }}>
+        <Container maxWidth="xl">
+          <Toolbar>
+            {/* Logo / Title */}
+            <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: "bold" }}>
+              📖 Book Website
+            </Typography>
 
-          {/* Desktop Navigation */}
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
-            {navLinks.map((link) => (
-              <Button key={link.title} href={link.href} color="inherit" sx={{ mx: 1 }}>
-                {link.title}
+            {/* Desktop Navigation */}
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
+              {navLinks.map((link) => (
+                <Button key={link.title} href={link.href} color="inherit" sx={{ mx: 1 }}>
+                  {link.title}
+                </Button>
+              ))}
+              <Button variant="contained" color="secondary">
+                Get the Book
               </Button>
-            ))}
-            <Button variant="contained" color="secondary">
-              Get the Book
-            </Button>
-          </Box>
+            </Box>
 
-          {/* Mobile Menu Icon */}
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={handleDrawerToggle}
-            sx={{ display: { md: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
+            {/* Mobile Menu Icon */}
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              onClick={handleDrawerToggle}
+              sx={{ display: { md: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </Container>
       </AppBar>
 
       {/* Mobile Drawer */}
