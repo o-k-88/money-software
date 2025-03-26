@@ -5,7 +5,7 @@ import { navLinks } from "../../helpers/links";
 
 const Footer = () => {
   return (
-    <Box component="footer" sx={{ backgroundColor: "primary.dark", color: "white", py: 4, mt: 4 }}>
+    <Box component="footer" sx={{ backgroundColor: "primary.dark", color: "white", py: 4 }}>
       <Container maxWidth="lg">
         <Grid container spacing={3} justifyContent="center">
           {/* Website Name & Copyright */}

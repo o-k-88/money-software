@@ -7,8 +7,8 @@ import { Box, Container } from "@mui/material";
 const Layout = () => {
   return (
     <>
-      <Header />
-      <Box component="main" sx={{ position: "relative" }}>
+      {/* <Header /> */}
+      <Box component="main" sx={{ position: "relative", overflow: "hidden" }}>
         <Outlet />
       </Box>
       <Footer />

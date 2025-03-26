@@ -7,12 +7,12 @@ import { createTheme, ThemeProvider, CssBaseline, Typography } from "@mui/materi
 
 const theme = createTheme({
   typography: {
-    fontFamily: "'Inter', sans-serif",
+    fontFamily: "Consolas, 'Courier New', monospace",
   },
   palette: {
-    primary: {
-      main: "#85BB65",
-    },
+    // primary: {
+    //   main: "#85BB65",
+    // },
     text: {
       primary: "#000000",
       secondary: "#666666",

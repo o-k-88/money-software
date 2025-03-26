@@ -1,36 +1,52 @@
 import React from "react";
-import { Box, Container, Typography, Grid, Button, Avatar, Stack, IconButton } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Button,
+  Avatar,
+  Stack,
+  IconButton,
+  Paper,
+} from "@mui/material";
 import Accordion from "@mui/material/Accordion";
-import AccordionActions from "@mui/material/AccordionActions";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
-import { GitHub, LinkedIn, Twitter } from "@mui/icons-material";
-import road from "./images/road.svg";
 import CustomSlider from "../../components/Carousel/CustomSlider";
-import bookImg from "./images/book.jpg";
 import andreiImg from "./images/andrei-kirilenko.jpg";
-import chapterImg from "./images/chapter-image.jpg";
-
-import arrows from "./images/arrows-down.png";
 
 import { REVIEWS } from "../../helpers/feedbacks";
+import CodeBlock from "../../components/CodeBlock/CodeBlock";
 
 const Homepage = () => {
   return (
     <>
+      {/* <Box
+        sx={{
+          position: "absolute",
+          top: "316px",
+          left: 0,
+          width: "100%",
+          height: "100%",
+          display: {
+            xs: "none", // Hide on small screens
+
+            md: "block", // Medium screens (desktops)
+          },
+        }}
+      >
+        <img src={road1} alt="Road illustration" style={{ maxWidth: "100%", height: "auto" }} />
+      </Box> */}
       <Box
         id="home"
         component="section"
         sx={{
-          marginTop: "80px",
-          py: 8,
-          backgroundImage: `url(${bookImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "100%",
+          py: { xs: 6, md: 10 },
         }}
       >
         <Container maxWidth="lg">
@@ -43,12 +59,12 @@ const Homepage = () => {
               lineHeight: 1.3,
               letterSpacing: "1.5px",
               // color: "secondary.main",
-              color: "primary.main",
+              color: "text.primary",
               textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
               mb: 3,
             }}
           >
-            Money Software
+            Money is Software
           </Typography>
 
           <Typography
@@ -66,17 +82,21 @@ const Homepage = () => {
             }}
             gutterBottom
           >
-            By Andrei Kirilenko
+            The road to the future wealth of nations
           </Typography>
+          <Container maxWidth="sm">
+            <CodeBlock />
+          </Container>
         </Container>
       </Box>
-      <Box component="section" id="chapter" sx={{ py: { xs: 6, md: 10, position: "relative" } }}>
+
+      <Box component="section" id="chapter" sx={{ py: { xs: 6, md: 10 } }}>
         <Container maxWidth="xl">
-          <Grid container spacing={4} alignItems="center">
+          <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
-              <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
+              {/* <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
                 What's Inside
-              </Typography>
+              </Typography> */}
               <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
                 Money Software is a comprehensive guide to understanding the world of finance and
                 technology. This book is a must-read for anyone interested in the intersection of
@@ -89,20 +109,6 @@ const Homepage = () => {
                 the curve or a technology enthusiast curious about the future of finance, Money
                 Software has something for you.
               </Typography>
-              <Button variant="contained" color="secondary" size="large" sx={{ px: 6 }} href="#">
-                Get the Book
-              </Button>
-              <Box
-                sx={{
-                  backgroundImage: `url(${arrows})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
-
-                  width: "100%",
-                  height: "100%",
-                }}
-              ></Box>
             </Grid>
             <Grid item xs={12} md={6}>
               <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
@@ -157,9 +163,9 @@ const Homepage = () => {
       </Box>
       <Box component="section" id="author" sx={{ py: { xs: 6, md: 10 } }}>
         <Container maxWidth="lg">
-          <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
+          {/* <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
             About The Author
-          </Typography>
+          </Typography> */}
 
           <Grid container spacing={4} justifyContent="center" alignItems="center">
             <Grid item xs={12} md={6}>
@@ -168,7 +174,7 @@ const Homepage = () => {
                 sx={{
                   fontWeight: 700,
                   fontSize: { xs: "2.5rem", md: "3.5rem" }, // Responsive font size
-                  color: "secondary.main", // Emphasize with primary color
+                  color: "primary.main", // Emphasize with primary color
                   textTransform: "uppercase", // Professional look
                   letterSpacing: "1.5px", // Adds spacing for readability
                   textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)", // Soft shadow effect
@@ -187,7 +193,7 @@ const Homepage = () => {
                   fontStyle: "italic", // Stylish italic touch
                   letterSpacing: "0.8px", // Slightly more spacing
                   borderLeft: "4px solid", // Decorative left border
-                  borderColor: "secondary.main", // Matches theme
+                  borderColor: "primary.main", // Matches theme
                   pl: 2, // Padding for spacing after border
                   mb: 2, // Margin bottom
                 }}
@@ -235,21 +241,15 @@ const Homepage = () => {
 
       <Box component="section" id="reviews" sx={{ py: { xs: 6, md: 10 } }}>
         <Container maxWidth="xl">
-          <Typography
+          {/* <Typography
             variant="h4"
             sx={{ fontWeight: 700, color: "primary.main", mb: 3, paddingLeft: "20px" }}
           >
             What Readers Say
-          </Typography>
+          </Typography> */}
           <CustomSlider feedbacks={REVIEWS} />
         </Container>
       </Box>
-
-      {/* <Box sx={{ py: 8 }}>
-        <Container maxWidth="lg" sx={{ textAlign: "center" }}>
-          <img src={road} alt="Road illustration" style={{ maxWidth: "100%", height: "auto" }} />
-        </Container>
-      </Box> */}
     </>
   );
 };
