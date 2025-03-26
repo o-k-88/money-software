@@ -22,7 +22,7 @@ import andreiImg from "./images/andrei-kirilenko.jpg";
 
 import { REVIEWS } from "../../helpers/feedbacks";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
-import line1 from "./images/line1.svg";
+import line from "./images/line.svg";
 
 const Homepage = () => {
   return (
@@ -73,7 +73,7 @@ const Homepage = () => {
             <CodeBlock />
           </Container>
           <Box sx={{ position: "absolute", right: "50%", bottom: "-48px" }}>
-            <Box component="img" src={line1} />
+            <Box component="img" src={line} />
           </Box>
         </Container>
       </Box>
@@ -95,7 +95,7 @@ const Homepage = () => {
           </Box>
 
           <Box sx={{ textAlign: "center" }}>
-            <Box component="img" src={line1} sx={{ stroke: "red" }} />
+            <Box component="img" src={line} sx={{ stroke: "red" }} />
           </Box>
 
           <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
