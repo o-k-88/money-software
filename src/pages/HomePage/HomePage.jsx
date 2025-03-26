@@ -22,7 +22,7 @@ import andreiImg from "./images/andrei-kirilenko.jpg";
 
 import { REVIEWS } from "../../helpers/feedbacks";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
-import line from "./images/line.svg";
+import line from "./images/Line.svg";
 
 const Homepage = () => {
   return (
