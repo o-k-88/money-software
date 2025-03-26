@@ -73,7 +73,7 @@ const Homepage = () => {
             <CodeBlock />
           </Container>
           <Box sx={{ position: "absolute", right: "50%", bottom: "-48px" }}>
-            <Box component="img" src={line} />
+            <img src={line} alt="" />
           </Box>
         </Container>
       </Box>
@@ -95,7 +95,7 @@ const Homepage = () => {
           </Box>
 
           <Box sx={{ textAlign: "center" }}>
-            <Box component="img" src={line} sx={{ stroke: "red" }} />
+            <img src={line} alt="" />
           </Box>
 
           <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
