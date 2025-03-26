@@ -5,17 +5,17 @@ import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/pris
 
 const CodeBlock = () => {
   const codeString = `
-const moneyIsSoftware = () => {
-  const title = "Money is Software";
-  const author = "Andrei Kirilenko";
-  const read = true;
-  let wealth = null;
+  const BOOK = () => {
+    const title = "Money is Software";
+    const author = "Andrei Kirilenko";
+    const read = true;
+    let wealth = null;
 
-  if (read) {
-    wealth = true;
-  } else {
-    wealth = false;
-  }
+    if (read) {
+        wealth = true;
+    } else {
+        wealth = false;
+    }
 };
   `;
 

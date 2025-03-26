@@ -52,7 +52,9 @@ const CustomSlider = ({ feedbacks }) => {
           >
             <CardHeader
               avatar={
-                <Avatar sx={{ bgcolor: deepPurple[500] }}>{feedback.name.slice(0, 1)}</Avatar>
+                <Avatar sx={{ bgcolor: "#fff", color: "text.secondary" }}>
+                  {feedback.name.slice(0, 1)}
+                </Avatar>
               }
               title={feedback.name}
               subheader="March 21, 2025"
