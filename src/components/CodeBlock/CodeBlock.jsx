@@ -6,8 +6,8 @@ import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/pris
 const CodeBlock = () => {
   const codeString = `
   const BOOK = () => {
-    const title = "Money is Software";
-    const author = "Andrei Kirilenko";
+    const title = "Money is Software" // Book title;
+    const author = "Andrei Kirilenko"; // Book author;
     const read = true;
     let wealth = null;
 

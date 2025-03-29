@@ -10,9 +10,9 @@ const theme = createTheme({
     fontFamily: "Consolas, 'Courier New', monospace",
   },
   palette: {
-    // primary: {
-    //   main: "#85BB65",
-    // },
+    primary: {
+      main: "#ce5214",
+    },
     text: {
       primary: "#000000",
       secondary: "#666666",

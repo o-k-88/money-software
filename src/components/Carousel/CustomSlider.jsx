@@ -41,7 +41,7 @@ const CustomSlider = ({ feedbacks }) => {
         <SwiperSlide key={feedback.id}>
           <Card
             sx={{
-              boxShadow: 3, // Shadow effect for depth
+              boxShadow: 2, // Shadow effect for depth
               transition: "transform 0.3s ease", // Smooth hover effect
               "&:hover": {
                 transform: "scale(1.05)", // Hover zoom effect
@@ -59,7 +59,7 @@ const CustomSlider = ({ feedbacks }) => {
               title={feedback.name}
               subheader="March 21, 2025"
               sx={{
-                bgcolor: "primary.light",
+                bgcolor: "primary.main",
                 color: "white",
                 textAlign: "center",
               }}

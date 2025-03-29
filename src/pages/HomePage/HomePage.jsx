@@ -23,6 +23,9 @@ import andreiImg from "./images/andrei-kirilenko.jpg";
 import { REVIEWS } from "../../helpers/feedbacks";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
 import line from "./images/Line.svg";
+import image1 from "./images/image-01.jpeg";
+import image2 from "./images/image-02.jpeg";
+import image3 from "./images/image-03.jpeg";
 
 const Homepage = () => {
   return (
@@ -31,60 +34,69 @@ const Homepage = () => {
         id="home"
         component="section"
         sx={{
-          py: { xs: 6, md: 10 },
+          py: { xs: 6, md: 12 },
           position: "relative",
+          backgroundImage: `url(${image1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <Container maxWidth="lg">
           <Typography
-            variant="h2" // Change from h1 to h2 for better balance
+            variant="h1" // Change from h1 to h2 for better balance
             align="center"
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "2.5rem", md: "4rem" }, // Responsive font sizes
+              fontSize: { xs: "2.5rem", md: "6rem" }, // Responsive font sizes
               lineHeight: 1.3,
               letterSpacing: "1.5px",
               // color: "secondary.main",
-              color: "text.primary",
+
+              color: "#fff",
+
               textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)",
-              mb: 3,
+              mb: 6,
             }}
           >
             Money is Software
           </Typography>
 
-          <Typography
+          {/* <Typography
             variant="h2"
             align="center"
             sx={{
               fontWeight: 400,
-              fontSize: "1.8rem", // Slightly bigger for emphasis
+              fontSize: "3rem", // Slightly bigger for emphasis
               lineHeight: 1.4,
-              color: "text.primary", // Secondary text color for contrast
+              color: "#fff", // Secondary text color for contrast
               // color: "#A626AD",
               letterSpacing: "1px", // Adds spacing between letters
-              mb: 4, // Larger margin bottom
+              mb: 6, // Larger margin bottom
             }}
             gutterBottom
           >
             The road to the future wealth of nations
-          </Typography>
-          <Container maxWidth="sm">
+          </Typography> */}
+          <Container maxWidth="md">
             <CodeBlock />
           </Container>
-          <Box sx={{ position: "absolute", right: "50%", bottom: "-48px" }}>
-            <img src={line} alt="" />
-          </Box>
         </Container>
       </Box>
 
-      <Box component="section" id="chapter" sx={{ py: { xs: 6 } }}>
+      <Box
+        component="section"
+        id="chapter"
+        sx={{
+          py: { xs: 6, md: 10 },
+        }}
+      >
         <Container maxWidth="lg">
-          {/* <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
-                What's Inside
-              </Typography> */}
-          <Box>
-            <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
+          <Box sx={{ mb: 4 }}>
+            <Typography
+              variant="body1"
+              sx={{ mb: 2, color: "text.primary", lineHeight: 1.6, fontSize: "1.2rem" }}
+            >
               Money is Software a comprehensive guide to understanding the world of finance and
               technology. This book is a must-read for anyone interested in the intersection of
               finance and technology. It covers a wide range of topics, including blockchain,
@@ -94,12 +106,7 @@ const Homepage = () => {
             </Typography>
           </Box>
 
-          <Box sx={{ textAlign: "center" }}>
-            <img src={line} alt="" />
-          </Box>
-
           <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
-            {/* Light background */}
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1-content"
@@ -146,90 +153,79 @@ const Homepage = () => {
           </Accordion>
         </Container>
       </Box>
-      <Box component="section" id="author" sx={{ py: { xs: 6, md: 10 } }}>
-        <Container maxWidth="lg">
-          {/* <Typography variant="h4" sx={{ fontWeight: 700, color: "primary.main", mb: 3 }}>
-            About The Author
-          </Typography> */}
+      <Box
+        component="section"
+        id="author"
+        sx={{
+          py: { xs: 6, md: 10 },
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${image3})`,
+          backgroundSize: "cover",
+          backgroundPosition: "top center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Container maxWidth="md">
+          <Paper
+            elevation={4}
+            sx={{
+              p: { xs: 3, md: 5 },
 
-          <Grid container spacing={4} justifyContent="center" alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Typography
-                variant="h2"
-                sx={{
-                  fontWeight: 700,
-                  fontSize: { xs: "2.5rem", md: "3.5rem" }, // Responsive font size
-                  color: "text.primary", // Emphasize with primary color
+              borderRadius: "12px",
+            }}
+          >
+            <Typography
+              variant="h2"
+              sx={{
+                fontWeight: 700,
+                fontSize: { xs: "2rem", md: "3rem" },
+                color: "text.primary",
+                letterSpacing: "1.5px",
+                textShadow: "1px 1px 4px rgba(0, 0, 0, 0.2)",
+                mb: 2,
+              }}
+            >
+              Andrei Kirilenko
+            </Typography>
 
-                  letterSpacing: "1.5px", // Adds spacing for readability
-                  textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)", // Soft shadow effect
-                  mb: 1.5, // Bottom margin for spacing
-                }}
-              >
-                Andrei Kirilenko
-              </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                fontWeight: 400,
+                fontSize: { xs: "1.25rem", md: "1.75rem" },
+                color: "text.secondary",
+                mb: 1,
+              }}
+            >
+              Professor of Finance
+            </Typography>
 
-              <Typography
-                variant="h5"
-                sx={{
-                  fontWeight: 400,
-                  fontSize: { xs: "1.25rem", md: "1.75rem" }, // Adjust size for devices
-                  color: "text.secondary", // Subtle contrast
+            <Typography
+              sx={{
+                fontWeight: 400,
+                fontSize: { xs: "1rem", md: "1.5rem" },
+                color: "text.secondary",
+                mb: 3,
+              }}
+            >
+              Cambridge Judge Business School
+            </Typography>
 
-                  letterSpacing: "0.8px", // Slightly more spacing
-                }}
-              >
-                Professor of Finance
-              </Typography>
-              <Typography
-                sx={{
-                  fontWeight: 400,
-                  fontSize: { xs: "1.25rem", md: "1.75rem" }, // Adjust size for devices
-                  color: "text.secondary", // Subtle contrast
+            <Typography variant="body1" sx={{ mb: 2, color: "text.primary", lineHeight: 1.7 }}>
+              Andrei Kirilenko is a Professor of Finance at the Cambridge Judge Business School and
+              the Founding Director of the Cambridge Centre for Finance, Technology, and Regulation.
+            </Typography>
 
-                  letterSpacing: "0.8px", // Slightly more spacing
+            <Typography variant="body1" sx={{ mb: 2, color: "text.primary", lineHeight: 1.7 }}>
+              He previously worked at MIT Sloan, Imperial College, and the U.S. Commodity Futures
+              Trading Commission (CFTC), using advanced analytical methods for financial
+              regulations.
+            </Typography>
 
-                  mb: 2, // Margin bottom
-                }}
-              >
-                Cambridge Judge Business School
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
-                Andrei Kirilenko is a Professor of Finance at the Cambridge Judge Business School
-                and the Founding Director of the Cambridge Centre for Finance, Technology, and
-                Regulation.
-              </Typography>
-              <Typography variant="body1" sx={{ mb: 2, color: "text.secondary", lineHeight: 1.6 }}>
-                He previously worked at MIT Sloan, Imperial College, and the U.S. Commodity Futures
-                Trading Commission (CFTC), using advanced analytical methods for financial
-                regulations.
-              </Typography>
-              <Typography variant="body1" sx={{ color: "text.secondary", lineHeight: 1.6 }}>
-                Andrei holds a PhD in Economics from the University of Pennsylvania with a
-                specialization in Finance from the Wharton School.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                component="img"
-                src={andreiImg}
-                alt="Author Image"
-                loading="lazy"
-                sx={{
-                  width: "100%",
-                  height: "auto",
-                  borderRadius: "12px",
-                  objectFit: "cover",
-                  boxShadow: 4,
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "scale(1.03)",
-                    boxShadow: 6,
-                  },
-                }}
-              />
-            </Grid>
-          </Grid>
+            <Typography variant="body1" sx={{ color: "text.primary", lineHeight: 1.7 }}>
+              Andrei holds a PhD in Economics from the University of Pennsylvania with a
+              specialization in Finance from the Wharton School.
+            </Typography>
+          </Paper>
         </Container>
       </Box>
 
