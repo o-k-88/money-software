@@ -1,11 +1,10 @@
 import React from "react";
-import { Box, Paper } from "@mui/material";
+import { Box } from "@mui/material";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark, oneLight, dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CodeBlock = () => {
-  const codeString = `
-  const BOOK = () => {
+  const codeString = `const BOOK = () => {
     const title = "Money is Software" // Book title;
     const author = "Andrei Kirilenko"; // Book author;
     const read = true;
@@ -20,26 +19,18 @@ const CodeBlock = () => {
   `;
 
   return (
-    <Paper
-      elevation={4}
+    <Box
       sx={{
-        p: 2,
-        borderRadius: 2,
-        // backgroundColor: "#1e1e1e", // VS Code background
+        backgroundColor: "#282C34",
+        borderRadius: 4,
+        overflowX: "auto",
+        fontSize: "1.2rem",
       }}
     >
-      <Box
-        sx={{
-          //   backgroundColor: "#1e1e1e",
-          borderRadius: 2,
-          overflowX: "auto",
-        }}
-      >
-        <SyntaxHighlighter language="javascript" style={oneLight} showLineNumbers>
-          {codeString}
-        </SyntaxHighlighter>
-      </Box>
-    </Paper>
+      <SyntaxHighlighter language="javascript" style={dracula} showLineNumbers>
+        {codeString}
+      </SyntaxHighlighter>
+    </Box>
   );
 };
 
