@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
 
-const TypingEffect = ({ text, speed = 100 }) => {
+const TypingEffect = ({ text, speed = 100, textColor }) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const TypingEffect = ({ text, speed = 100 }) => {
       variant="h2"
       sx={{
         mb: 2,
-        color: "#fff",
+        color: textColor || "white",
 
         lineHeight: 1.6,
         fontSize: { xs: "1.5rem" },

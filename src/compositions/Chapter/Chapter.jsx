@@ -9,6 +9,15 @@ import {
   Button,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Link } from "react-router-dom";
+
+const TypographyStyle = ({ children }) => {
+  return (
+    <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
+      {children}
+    </Typography>
+  );
+};
 
 const Chapter = () => {
   return (
@@ -19,21 +28,7 @@ const Chapter = () => {
         py: { xs: 6, md: 10 },
       }}
     >
-      <Container maxWidth="lg">
-        <Box sx={{ mb: 4 }}>
-          <Typography
-            variant="body1"
-            sx={{ mb: 2, color: "text.primary", lineHeight: 1.6, fontSize: "1.2rem" }}
-          >
-            Money is Software a comprehensive guide to understanding the world of finance and
-            technology. This book is a must-read for anyone interested in the intersection of
-            finance and technology. It covers a wide range of topics, including blockchain,
-            cryptocurrencies, and algorithmic trading. Whether you are a finance professional
-            looking to stay ahead of the curve or a technology enthusiast curious about the future
-            of finance, Money Software has something for you.
-          </Typography>
-        </Box>
-
+      <Container maxWidth="xl">
         <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -41,23 +36,136 @@ const Chapter = () => {
             id="panel1-header"
           >
             <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 1 - Introduction
+              📖 Preface -- The Big Idea
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <TypographyStyle>
+              Take a moment and mentally picture money. Your mental image probably looks like a
+              colorful piece of paper or a metal disk or a rectangular piece of plastic.
+            </TypographyStyle>
+            <TypographyStyle>
+              Now that you have a mental image of money, can you imagine using it? Most anything you
+              want to do with your money these days - pay, transfer, invest - involves computers. To
+              understand money computers need software - instructions that tell a computer what to
+              do.
+            </TypographyStyle>
+            <TypographyStyle>
+              Money is somewhere in that software. Where? Who puts it there? Can money be taken out
+              of the software and placed somewhere else? What’s left in the software once you take
+              money out? Can software make more money?
+              <Link
+                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
+                to="/preface"
+              >
+                Read more...
+              </Link>
+            </TypographyStyle>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+          {/* Light background */}
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography component="span" sx={{ fontWeight: 600 }}>
+              📖 Chapter 1 -- What is money?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <TypographyStyle>
+              Money is really any medium that is commonly accepted to transfer value from the past
+              to the present and from the present to the future. This medium can be tangible -
+              something that you can see and feel - like metal or paper or plastic. Or intangible -
+              something that human senses cannot process - like an encrypted piece of computer code.
+            </TypographyStyle>
+
+            <TypographyStyle>What do humans need money for?</TypographyStyle>
+
+            <TypographyStyle>
+              To exchange for something of need or importance to them now or to set aside for
+              something of need or importance to them later. See, it’s human mental time travel
+              again - from the past to the present and from the present to some imagined future.
+            </TypographyStyle>
+            <TypographyStyle>
+              Some of what is considered to be of need or importance to humans stayed the same for
+              millennia and some changed a lot.
+            </TypographyStyle>
+            <TypographyStyle>
+              What stayed the same is commonly referred to as death and taxes. I would also add
+              weddings and debt to that.
+              <Link
+                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
+                to="/what-is-money"
+              >
+                Read more...
+              </Link>
+            </TypographyStyle>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+          {/* Light background */}
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography component="span" sx={{ fontWeight: 600 }}>
+              📖 Chapter 2 -- How does debt work?
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <TypographyStyle>
+              Debt can be defined as something owed. Remember that clay or papyrus record? It
+              represents something owed - a certain number of your sacks of wheat stored in a keep
+              that can be collected at will by you in the future. Think of it as a deposit you’ve
+              made. It is value owed to you. It is also called a liability for the storage place -
+              an obligation that they are liable to care for it on your behalf.
+            </TypographyStyle>
+            <TypographyStyle>
+              What if someone other than you comes to the storage facility while you are not around
+              and asks for wheat to plant now with a promise to bring back all of it plus more next
+              year. That promise is called credit. The promise is from the borrower or debtor to the
+              lender or creditor to bring back all of the wheat plus more, typically recorded as a
+              fraction of the whole - say 10 percent or 1/10th more. This “more” part is typically
+              called interest.
+            </TypographyStyle>
+            <TypographyStyle>
+              It’s your wheat, not the storage facility’s, but let’s say when you agreed to store it
+              there, you also agreed that they could give it out to someone you don’t know in return
+              for some payment to you. Say you agreed to be paid 1/20th of the total you’ve stored.
+              Now the storage facility took your wheat and gave it to someone else to plant in
+              return for a promise to bring it back next year whole plus 1/10th more. You have a
+              recorded claim on the bank and the bank has a recorded claim on someone else.
+              Importantly though, that someone else now has wheat to plant, grow and then to
+              harvest. Your wheat now works as an asset for the bank earning interest. It is the
+              same wheat that otherwise would have been sitting in storage being eaten by mice.
+              <Link
+                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
+                to="/debt"
+              >
+                Read more...
+              </Link>
+            </TypographyStyle>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+          {/* Light background */}
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel2-content"
+            id="panel2-header"
+          >
+            <Typography component="span" sx={{ fontWeight: 600 }}>
+              📖 Chapter 3 -- Monetary system
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus
-              ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet
-              <Button
-                href="#"
-                sx={{
-                  textTransform: "capitalize",
-                  padding: 0,
-                  marginLeft: 1,
-                }}
-              >
-                Read more
-              </Button>
+              ex, sit amet blandit leo lobortis eget.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -69,14 +177,53 @@ const Chapter = () => {
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 2 - Lorem ipsun
+              📖 Chapter 9 -- From gold to bitcoin
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus
-              ex, sit amet blandit leo lobortis eget.
-            </Typography>
+            <TypographyStyle>
+              Monetary systems based on metals continued to operate for the next 2500 years - well
+              into the 20th century. Gold in particular has proven to be especially well suited for
+              running a metal-based monetary system. Gold is a chemical element - meaning that it
+              cannot composed from underlying components; and many alchemists definitely tried. It
+              remains solid under standard room temperature. It does not react with water and most
+              other chemical elements. It does not stick to a magnet. It is heavy and pleasantly
+              shiny. And most importantly, it takes a lot of work to find and mine. That makes it
+              scarce. And scarcity holds value over time.
+            </TypographyStyle>
+            <TypographyStyle>
+              To this day gold remains the most valuable asset with an estimated market value of
+              well over 10 trillion dollars and an annual turnover - value bought and sold every
+              year - double that. We are talking about 20 plus trillion (!) dollars changing hands
+              every year. That’s over five times the value created in a year in the whole country of
+              India. The vast majority of that traded gold bullion never leaves incredibly secure
+              vaults. What happens then if gold gets bought or sold? The ownership of gold deposited
+              in a secure vault is signified by a certificate signed by the vault’s custodian. To
+              get the gold in the future, the owner can present the signed certificate to the
+              custodian and receive the gold. That way trading in gold can be done by exchanging
+              signed certificates without the actual physical gold ever leaving a secure vault. This
+              practice dates back to the 17th century goldsmiths in Amsterdam and London. Of course,
+              any such exchange had to be appropriately recorded in a ledger - a book of issuance
+              and transaction records - so that the custodian of each vault knew exactly who owned
+              what when.
+            </TypographyStyle>
+            <TypographyStyle>
+              What if a holder of a signed certificate - which were also known as notes, orders or
+              bills - issued by one goldsmith, say John Portman wants to deposit it with another
+              goldsmith, say Edward Backwell. No problem! Edward Backwell of Lombard Street, London
+              accepted the notes, orders and bills issued by John Portman and many other goldsmiths.
+              By doing so Edward issued temporary credit to John and recorded it in his ledger.
+              Edward held the note signed by John, which means that John owed Edward the amount of
+              assigned gold until John cleared his outstanding balance with Edward. This process is
+              called bilateral clearing. Bilateral clearing arrangements - a way to clear balances
+              held against each other - formed a private clearing network.{" "}
+              <Link
+                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
+                to="/gold-to-bitcoin"
+              >
+                Read more...
+              </Link>
+            </TypographyStyle>
           </AccordionDetails>
         </Accordion>
       </Container>

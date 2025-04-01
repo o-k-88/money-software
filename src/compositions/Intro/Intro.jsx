@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Typography, Grid } from "@mui/material";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
 import image1 from "./images/image-01.jpeg";
+import image3 from "./images/image-03.jpeg";
 import whatsupImg from "./images/whatsupImg.jpeg";
 import TypingEffect from "../../components/TypingEffect/TypingEffect";
 
@@ -17,9 +18,8 @@ const Intro = () => {
         // backgroundSize: "cover",
         // backgroundPosition: "center",
         // backgroundRepeat: "no-repeat",
-        // background: "linear-gradient(135deg, #0F1829, #16253A, #1D334D)",
+
         background: "#16172E",
-        // background: "linear-gradient(90deg, rgba(22,23,46,1) 0%, #0f113b 42%, #081853 100%)",
       }}
     >
       <Container maxWidth="xl">
@@ -42,7 +42,7 @@ const Intro = () => {
             </Typography>
 
             <TypingEffect
-              text="Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, natus."
+              text="This book is about the biggest transformation of wealth in modern times - one where the future is dictated by lines of code. Do not be left behind."
               speed={20}
             />
           </Grid>

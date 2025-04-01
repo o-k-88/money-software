@@ -5,8 +5,8 @@ import { oneDark, oneLight, dracula } from "react-syntax-highlighter/dist/esm/st
 
 const CodeBlock = () => {
   const codeString = `const BOOK = () => {
-    const title = "Money is Software" // Book title;
-    const author = "Andrei Kirilenko"; // Book author;
+    const title = "Money is Software";
+    const author = "Andrei Kirilenko";
     const read = true;
     let wealth = null;
 

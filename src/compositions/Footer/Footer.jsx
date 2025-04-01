@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Grid, Typography, Link, IconButton } from "@mui/material";
-import { Facebook, Twitter, Instagram } from "@mui/icons-material";
+import { Facebook, Twitter, Instagram, LinkedIn } from "@mui/icons-material";
 import { navLinks } from "../../helpers/links";
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Website Name & Copyright */}
           <Grid item xs={12} md={4} textAlign={{ xs: "center", md: "left" }}>
             <Typography variant="h6" fontWeight="bold">
-              📖 Book Website
+              📖 Money is Software
             </Typography>
             <Typography variant="body2" sx={{ opacity: 0.7 }}>
               © {new Date().getFullYear()} All Rights Reserved.
@@ -35,14 +35,12 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <Grid item xs={12} md={4} textAlign={{ xs: "center", md: "right" }}>
-            <IconButton color="inherit">
-              <Facebook />
-            </IconButton>
-            <IconButton color="inherit">
-              <Twitter />
-            </IconButton>
-            <IconButton color="inherit">
-              <Instagram />
+            <IconButton
+              color="inherit"
+              href="https://www.linkedin.com/in/andrei-kirilenko-941b381/"
+              target="_blank"
+            >
+              <LinkedIn />
             </IconButton>
           </Grid>
         </Grid>
