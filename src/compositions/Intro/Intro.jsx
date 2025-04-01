@@ -18,7 +18,7 @@ const Intro = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Grid container spacing={{ xs: 2, sm: 6 }} alignItems="center">
+        <Grid container spacing={{ xs: 0, sm: 6 }} alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography
               component="h1"
@@ -42,7 +42,7 @@ const Intro = () => {
             />
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
-            <Box sx={{ maxWidth: "100%", height: "auto" }}>
+            <Box sx={{ width: "100%", height: "auto" }}>
               <CodeBlock />
             </Box>
           </Grid>
