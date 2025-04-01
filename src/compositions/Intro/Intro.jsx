@@ -13,24 +13,19 @@ const Intro = () => {
       component="section"
       sx={{
         py: { xs: 6, md: 12 },
-        // position: "relative",
-        // backgroundImage: `url(${whatsupImg})`,
-        // backgroundSize: "cover",
-        // backgroundPosition: "center",
-        // backgroundRepeat: "no-repeat",
 
         background: "#16172E",
       }}
     >
       <Container maxWidth="xl">
-        <Grid container spacing={6} alignItems="center">
+        <Grid container spacing={{ xs: 2, sm: 6 }} alignItems="center">
           <Grid item xs={12} md={6}>
             <Typography
               component="h1"
               variant="h2"
               sx={{
                 fontWeight: 700,
-                fontSize: { xs: "3.5rem", lg: "4.6rem" },
+                fontSize: { xs: "3.5rem", sm: "4rem", lg: "4.6rem" },
 
                 letterSpacing: "1.5px",
 

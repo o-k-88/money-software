@@ -23,8 +23,8 @@ const CodeBlock = () => {
       sx={{
         backgroundColor: "#282C34",
         borderRadius: 4,
-        overflowX: "auto",
-        fontSize: "1.2rem",
+
+        fontSize: { xs: "0.625rem", sm: "1.2rem" },
       }}
     >
       <SyntaxHighlighter language="javascript" style={dracula} showLineNumbers>
