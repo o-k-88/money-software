@@ -24,7 +24,7 @@ const TypingEffect = ({ text, speed = 100, textColor }) => {
     <Typography
       variant="h2"
       sx={{
-        mb: { xs: 1, md: 2 },
+        mb: { xs: 4, sm: 2 },
         color: textColor || "white",
 
         lineHeight: 1.6,

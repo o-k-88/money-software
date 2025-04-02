@@ -163,10 +163,34 @@ const Chapter = () => {
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography variant="body2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus
-              ex, sit amet blandit leo lobortis eget.
-            </Typography>
+            <TypographyStyle variant="body2">
+              This sad period lasted for about 400 years. Then, gradually, some of the places in and
+              around what is now Greece and coastal areas of the Aegean sea became inhabited again.
+              Settlements formed, then villages, then towns. Specialization - in wine, olive oil,
+              pottery, tools, jewlery - became common due to differences in soils, minerals, water,
+              landscape and climate. Trade started again. City states were formed. The Greeks have
+              acquired their own 24 letter alphabet, which helped forge a common identity. People
+              spoke and wrote in a common language, ate very similar food, wore very similar
+              clothes, competed in the same sports, and believed in the same gods, but different
+              city states also developed their own politics, economy, and trade. And these were
+              often very different.
+            </TypographyStyle>
+            <TypographyStyle>
+              The Greeks also traded internationally - especially with the Persians, who were very
+              different from the Greeks. They spoke a different language, had a different way of
+              writing, dressed in different clothes, and prayed to different gods. That made it hard
+              for the Greeks and the Persians to trade with each other but not impossible. For
+              centuries, especially for international trade, it was common to use gold or silver as
+              a common currency. Gold and silver are durable, could be quickly hidden, hard to
+              counterfeit, and easy to verify without a common language. Metals simply need to be
+              weighted, assuming the scales are correct.{" "}
+              <Link
+                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
+                to="/monetary-system"
+              >
+                Read more...
+              </Link>
+            </TypographyStyle>
           </AccordionDetails>
         </Accordion>
         <Accordion sx={{ bgcolor: "grey.100" }}>
@@ -206,17 +230,6 @@ const Chapter = () => {
               any such exchange had to be appropriately recorded in a ledger - a book of issuance
               and transaction records - so that the custodian of each vault knew exactly who owned
               what when.
-            </TypographyStyle>
-            <TypographyStyle>
-              What if a holder of a signed certificate - which were also known as notes, orders or
-              bills - issued by one goldsmith, say John Portman wants to deposit it with another
-              goldsmith, say Edward Backwell. No problem! Edward Backwell of Lombard Street, London
-              accepted the notes, orders and bills issued by John Portman and many other goldsmiths.
-              By doing so Edward issued temporary credit to John and recorded it in his ledger.
-              Edward held the note signed by John, which means that John owed Edward the amount of
-              assigned gold until John cleared his outstanding balance with Edward. This process is
-              called bilateral clearing. Bilateral clearing arrangements - a way to clear balances
-              held against each other - formed a private clearing network.{" "}
               <Link
                 style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
                 to="/gold-to-bitcoin"

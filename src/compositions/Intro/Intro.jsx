@@ -14,7 +14,9 @@ const Intro = () => {
       sx={{
         py: { xs: 6, md: 12 },
 
-        background: "#16172E",
+        // background: "#16172E",
+        background: "linear-gradient(135deg, #16172E 0%, #3A3B5F 100%)",
+        // background: "linear-gradient(135deg, #16172E 0%, #1F2041 50%, #3D348B 100%)",
       }}
     >
       <Container maxWidth="xl">
@@ -29,7 +31,7 @@ const Intro = () => {
 
                 letterSpacing: "1.5px",
 
-                color: "primary.main",
+                color: "#00FF00",
                 mb: { xs: 2, md: 3 },
               }}
             >
@@ -39,6 +41,7 @@ const Intro = () => {
             <TypingEffect
               text="This book is about the biggest transformation of wealth in modern times - one where the future is dictated by lines of code. Do not be left behind."
               speed={20}
+              // textColor="primary.main"
             />
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>

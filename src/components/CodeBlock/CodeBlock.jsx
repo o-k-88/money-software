@@ -9,22 +9,22 @@ const CodeBlock = () => {
     const author = "Andrei Kirilenko";
     const read = true;
     let wealth = null;
-
+    
     if (read) {
         wealth = true;
     } else {
         wealth = false;
     }
+  return wealth;
 };
   `;
 
   return (
     <Box
       sx={{
-        backgroundColor: "#282C34",
         borderRadius: 4,
 
-        fontSize: { xs: "0.625rem", sm: "1.2rem" },
+        fontSize: { xs: "0.7rem", sm: "1rem", md: "1rem", xl: "1.2rem" },
       }}
     >
       <SyntaxHighlighter language="javascript" style={dracula} showLineNumbers>

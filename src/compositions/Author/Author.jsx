@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Paper, Typography, Grid } from "@mui/material";
-import image3 from "./images/image-03.jpeg";
+
 import andrei from "./images/AKirilenko.jpg";
 
 const Author = () => {
@@ -10,15 +10,11 @@ const Author = () => {
       id="author"
       sx={{
         py: { xs: 6, md: 10 },
-        // backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${image3})`,
-        // backgroundSize: "cover",
-        // backgroundPosition: "top center",
-        // backgroundRepeat: "no-repeat",
       }}
     >
       <Container maxWidth="xl">
         <Grid container spacing={6} justifyContent="center" alignItems="center">
-          <Grid item xs={12} md={4}>
+          <Grid item sm={12} md={4}>
             <Box
               component="img"
               src={andrei}
@@ -31,7 +27,7 @@ const Author = () => {
               }}
             />
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item sm={12} md={8}>
             <Typography
               variant="h2"
               sx={{
@@ -75,7 +71,7 @@ const Author = () => {
 
             <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 2 }}>
               After the Global Financial Crisis, he served as Chief Economist of the U.S. Commodity
-              Futures Trading Commission (CFTC), where he received the CFTC Chairman's Awarded for
+              Futures Trading Commission (CFTC), where he received the CFTC Chairman's Award for
               Excellence (highest honor).
             </Typography>
             <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
