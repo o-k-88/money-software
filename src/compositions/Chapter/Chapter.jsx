@@ -71,7 +71,7 @@ const Chapter = () => {
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 1 -- What is money?
+              📖 Chapter 1 -- Debt as money
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
