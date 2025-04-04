@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Paper, Typography, Grid } from "@mui/material";
 
-import andrei from "./images/AKirilenko.jpg";
+import andrei from "./images/akgreen.jpg";
 
 const Author = () => {
   return (
