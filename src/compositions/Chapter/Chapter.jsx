@@ -71,7 +71,7 @@ const Chapter = () => {
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 1 -- Debt as money
+              📖 Chapter 1 -- What is money?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -113,38 +113,27 @@ const Chapter = () => {
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 2 -- How does debt work?
+              📖 Chapter 2 -- Debt as money
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <TypographyStyle>
-              Debt can be defined as something owed. Remember that clay or papyrus record? It
-              represents something owed - a certain number of your sacks of wheat stored in a keep
-              that can be collected at will by you in the future. Think of it as a deposit you’ve
-              made. It is value owed to you. It is also called a liability for the storage place -
-              an obligation that they are liable to care for it on your behalf.
+              The US dollar is currently the most widely used money in transactions involving goods
+              and services around the world. Let’s take a look at a US dollar bill. On the front of
+              it we will find the following words: “This note is legal tender for all debts, public
+              or private.” Notice that it says ‘debts’. There is no mention of transactions
+              involving goods or services, only debts. Have you wondered why? How did these words
+              get there?
             </TypographyStyle>
             <TypographyStyle>
-              What if someone other than you comes to the storage facility while you are not around
-              and asks for wheat to plant now with a promise to bring back all of it plus more next
-              year. That promise is called credit. The promise is from the borrower or debtor to the
-              lender or creditor to bring back all of the wheat plus more, typically recorded as a
-              fraction of the whole - say 10 percent or 1/10th more. This “more” part is typically
-              called interest.
-            </TypographyStyle>
-            <TypographyStyle>
-              It’s your wheat, not the storage facility’s, but let’s say when you agreed to store it
-              there, you also agreed that they could give it out to someone you don’t know in return
-              for some payment to you. Say you agreed to be paid 1/20th of the total you’ve stored.
-              Now the storage facility took your wheat and gave it to someone else to plant in
-              return for a promise to bring it back next year whole plus 1/10th more. You have a
-              recorded claim on the bank and the bank has a recorded claim on someone else.
-              Importantly though, that someone else now has wheat to plant, grow and then to
-              harvest. Your wheat now works as an asset for the bank earning interest. It is the
-              same wheat that otherwise would have been sitting in storage being eaten by mice.
+              Let’s start with what debt is. Debt can be defined as something owed. Remember that
+              clay or papyrus record? It represents something owed - a certain number of your sacks
+              of wheat stored in a keep that can be collected by you in the future. It is owed to
+              you. It is also called a liability for the storage place - an obligation that they are
+              liable for.
               <Link
                 style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
-                to="/debt"
+                to="/debt-as-money"
               >
                 Read more...
               </Link>
