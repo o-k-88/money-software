@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const TypographyStyle = ({ children }) => {
   return (
-    <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
+    <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8, color: "#fff" }}>
       {children}
     </Typography>
   );
@@ -29,13 +29,13 @@ const Chapter = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
               📖 Preface -- The Big Idea
             </Typography>
           </AccordionSummary>
@@ -63,14 +63,14 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
               📖 Chapter 1 -- Debt as money
             </Typography>
           </AccordionSummary>
@@ -82,37 +82,25 @@ const Chapter = () => {
               something that human senses cannot process - like an encrypted piece of computer code.
             </TypographyStyle>
 
-            <TypographyStyle>What do humans need money for?</TypographyStyle>
-
             <TypographyStyle>
-              To exchange for something of need or importance to them now or to set aside for
-              something of need or importance to them later. See, it’s human mental time travel
-              again - from the past to the present and from the present to some imagined future.
-            </TypographyStyle>
-            <TypographyStyle>
-              Some of what is considered to be of need or importance to humans stayed the same for
-              millennia and some changed a lot.
-            </TypographyStyle>
-            <TypographyStyle>
-              What stayed the same is commonly referred to as death and taxes. I would also add
-              weddings and debt to that.
+              What do humans need money for?
               <Link
                 style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
-                to="/what-is-money"
+                to="/debt-as-money"
               >
                 Read more...
               </Link>
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
               📖 Chapter 2 -- How does debt work?
             </Typography>
           </AccordionSummary>
@@ -151,14 +139,14 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
               📖 Chapter 3 -- Monetary system
             </Typography>
           </AccordionSummary>
@@ -185,7 +173,7 @@ const Chapter = () => {
               counterfeit, and easy to verify without a common language. Metals simply need to be
               weighted, assuming the scales are correct.{" "}
               <Link
-                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
+                style={{ textDecoration: "none", color: "#C9328E", marginLeft: ".5rem" }}
                 to="/monetary-system"
               >
                 Read more...
@@ -193,14 +181,14 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100" }}>
+        <Accordion sx={{ bgcolor: "#7169E2" }}>
           {/* Light background */}
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
               📖 Chapter 9 -- From gold to bitcoin
             </Typography>
           </AccordionSummary>

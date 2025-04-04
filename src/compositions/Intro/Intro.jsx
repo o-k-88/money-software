@@ -15,7 +15,7 @@ const Intro = () => {
         py: { xs: 6, md: 12 },
 
         // background: "#16172E",
-        background: "linear-gradient(135deg, #16172E 0%, #3A3B5F 100%)",
+        // background: "linear-gradient(135deg, #16172E 0%, #3A3B5F 100%)",
         // background: "linear-gradient(135deg, #16172E 0%, #1F2041 50%, #3D348B 100%)",
       }}
     >

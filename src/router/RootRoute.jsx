@@ -18,7 +18,7 @@ const RootRoute = () => {
       </Route>
       <Route element={<LayoutPage />}>
         <Route path="/preface" element={<Preface />} />
-        <Route path="/what-is-money" element={<WhatIsMoney />} />
+        <Route path="/debt-as-money" element={<WhatIsMoney />} />
         <Route path="/debt" element={<Debt />} />
         <Route path="/gold-to-bitcoin" element={<GoldToBitcoin />} />
         <Route path="/monetary-system" element={<MonetarySystem />} />
