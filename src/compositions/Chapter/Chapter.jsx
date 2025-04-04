@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 const TypographyStyle = ({ children }) => {
   return (
-    <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8, color: "#fff" }}>
+    <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8, color: "text.primary" }}>
       {children}
     </Typography>
   );
@@ -29,17 +29,18 @@ const Chapter = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
+        <Accordion sx={{ mb: 2 }}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel1-content"
             id="panel1-header"
+            sx={{ bgcolor: "#7169E2" }}
           >
             <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
-              📖 Preface -- The Big Idea
+              💡 Preface -- The Big Idea
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               Take a moment and mentally picture money. Your mental image probably looks like a
               colorful piece of paper or a metal disk or a rectangular piece of plastic.
@@ -66,15 +67,15 @@ const Chapter = () => {
         <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
-              📖 Chapter 1 -- Debt as money
+              💵 Chapter 1 -- What is money?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               Money is really any medium that is commonly accepted to transfer value from the past
               to the present and from the present to the future. This medium can be tangible -
@@ -96,15 +97,15 @@ const Chapter = () => {
         <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
-              📖 Chapter 2 -- How does debt work?
+              📉 Chapter 2 -- Debt as money
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               Debt can be defined as something owed. Remember that clay or papyrus record? It
               represents something owed - a certain number of your sacks of wheat stored in a keep
@@ -142,15 +143,15 @@ const Chapter = () => {
         <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
-              📖 Chapter 3 -- Monetary system
+              🏦 Chapter 3 -- Monetary system
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle variant="body2">
               This sad period lasted for about 400 years. Then, gradually, some of the places in and
               around what is now Greece and coastal areas of the Aegean sea became inhabited again.
@@ -184,15 +185,15 @@ const Chapter = () => {
         <Accordion sx={{ bgcolor: "#7169E2" }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
             <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
-              📖 Chapter 9 -- From gold to bitcoin
+              🏅 Chapter 9 -- From gold to bitcoin
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               Monetary systems based on metals continued to operate for the next 2500 years - well
               into the 20th century. Gold in particular has proven to be especially well suited for
