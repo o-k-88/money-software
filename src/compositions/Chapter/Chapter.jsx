@@ -13,7 +13,32 @@ import { Link } from "react-router-dom";
 
 const TypographyStyle = ({ children }) => {
   return (
-    <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8, color: "text.primary" }}>
+    <Typography
+      variant="body1"
+      sx={{
+        mb: 2,
+        lineHeight: 1.8,
+        color: "text.primary",
+        letterSpacing: "0.5px",
+        position: "relative",
+        paddingLeft: "12px",
+
+        // Optional text shadow for a soft effect
+        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.1)",
+
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          left: 0,
+          top: "50%",
+          transform: "translateY(-50%)",
+          width: "4px",
+          height: "80%",
+          background: "linear-gradient(180deg, #ddd, #bbb)",
+          borderRadius: "2px",
+        },
+      }}
+    >
       {children}
     </Typography>
   );

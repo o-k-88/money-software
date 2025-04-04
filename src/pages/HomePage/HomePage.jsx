@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Intro from "../../compositions/Intro/Intro";
 import Chapter from "../../compositions/Chapter/Chapter";

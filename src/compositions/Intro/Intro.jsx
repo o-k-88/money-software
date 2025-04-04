@@ -17,37 +17,55 @@ const Intro = () => {
       <Container maxWidth="xl">
         <Grid container alignItems="center">
           <Grid item xs={12} md={6} lg={7}>
-            <Box sx={{ mr: { xs: 0, md: 2 } }}>
+            <Box sx={{ mr: { xs: 0, md: 2 }, position: "relative" }}>
               <Typography
                 component="h1"
                 variant="h2"
                 sx={{
                   fontWeight: 700,
-                  fontSize: { xs: "3.5rem", sm: "4rem", lg: "4.6rem" },
+                  fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" },
                   letterSpacing: "1.5px",
-                  color: "#00FF00",
-                  mb: { xs: 2, md: 3 },
+                  textTransform: "uppercase",
+                  backgroundImage: "linear-gradient(45deg, #00FF00, #00AA00)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  textShadow: "4px 4px 10px rgba(0, 255, 0, 0.5)",
+                  mb: { xs: 4, md: 6 },
+                  position: "relative",
+                  "&::after": {
+                    content: '""',
+                    display: "block",
+                    width: "50%",
+                    height: "4px",
+                    backgroundColor: "#00FF00",
+                    position: "absolute",
+                    bottom: "-8px",
+                    left: "0",
+                    borderRadius: "2px",
+                  },
                 }}
               >
                 Money is Software
               </Typography>
-
               <TypingEffect
                 text="This book is about the biggest transformation of wealth in modern times - one where the future is dictated by lines of code. Do not be left behind."
                 speed={20}
               />
+              <Box
+                component="img"
+                src={line2}
+                alt="line"
+                sx={{
+                  position: "absolute",
+                  left: "0",
+                  zIndex: 99,
+                  height: { md: "150px" },
+                  display: { xs: "none", md: "block" },
+
+                  mt: 4,
+                }}
+              />
             </Box>
-            <Box
-              component="img"
-              src={line2}
-              alt="line"
-              sx={{
-                display: { xs: "none", md: "block" },
-                width: "100px",
-                height: "auto",
-                mt: 4,
-              }}
-            />
           </Grid>
           <Grid item xs={12} md={6} lg={5}>
             <Box sx={{ width: "100%", height: "auto", ml: { xs: 0, md: 4 } }}>

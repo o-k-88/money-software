@@ -1,7 +1,18 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark, oneLight, dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  oneDark,
+  funky,
+  twilight,
+  cb,
+  coldarkDark,
+  materialDark,
+  materialOceanic,
+  nightOwl,
+  synthwave84,
+  zTouch,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CodeBlock = () => {
   const codeString = `const BOOK = () => {
@@ -23,11 +34,10 @@ const CodeBlock = () => {
     <Box
       sx={{
         borderRadius: 4,
-
         fontSize: { xs: "0.7rem", sm: "1rem", md: "1rem", xl: "1.2rem" },
       }}
     >
-      <SyntaxHighlighter language="javascript" style={dracula} showLineNumbers>
+      <SyntaxHighlighter language="javascript" style={funky} showLineNumbers>
         {codeString}
       </SyntaxHighlighter>
     </Box>
