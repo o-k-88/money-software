@@ -18,19 +18,27 @@ const Author = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Grid container spacing={6} justifyContent="center" alignItems="center">
-          <Grid item sm={12} md={4} sx={{ order: { xs: 0, md: 1 } }}>
+        <Grid
+          container
+          justifyContent="space-between"
+          // alignItems="center"
+          sx={{
+            borderBottom: { md: "none", lg: "4px solid #fff" },
+          }}
+        >
+          <Grid item sm={12} md={6} lg={5} sx={{ order: { xs: 0, md: 1 } }}>
             <Box
               component="img"
               src={andrei}
               alt="Author"
               sx={{
                 width: "100%",
-                height: "auto",
+                height: { sm: "auto", lg: "100%" },
+                mb: { xs: 2, md: 0 },
               }}
             />
           </Grid>
-          <Grid item sm={12} md={7}>
+          <Grid item sm={12} md={6} lg={7}>
             <Box sx={{ color: "#fff" }}>
               <Typography
                 variant="h2"
@@ -38,8 +46,6 @@ const Author = () => {
                   fontWeight: 700,
                   fontSize: { xs: "2.2rem", md: "3.5rem" },
                   letterSpacing: "1.8px",
-
-                  mb: 2,
 
                   // Gradient text effect
                   backgroundImage: "linear-gradient(90deg, #ffffff, #e0e0e0)",

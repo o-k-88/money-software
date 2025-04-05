@@ -8,22 +8,25 @@ import code from "./images/code.webp";
 const Layout = () => {
   return (
     <>
-      {/* <Header /> */}
       <Box
-        component="main"
+        component="div"
+        className="g-content"
         sx={{
           position: "relative",
           overflow: "hidden",
           background: "linear-gradient(135deg, #16172E 0%, #3A3B5F 100%)",
+
           // backgroundImage: `url(${code})`,
           // backgroundSize: "cover",
           // backgroundPosition: "center center",
           // backgroundRepeat: "no-repeat",
         }}
       >
-        <Outlet />
+        <Box component="main">
+          <Outlet />
+        </Box>
+        <Footer />
       </Box>
-      <Footer />
     </>
   );
 };
