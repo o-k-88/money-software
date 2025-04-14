@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container, Paper, Typography, Grid } from "@mui/material";
 
-import andrei from "./images/AKirilenko-removebg-preview.png";
+import andrei from "./images/akstillsep-nobg.png";
 import code from "./images/code.webp";
 
 const Author = () => {
@@ -21,9 +21,9 @@ const Author = () => {
         <Grid
           container
           justifyContent="space-between"
-          // alignItems="center"
+          alignItems="center"
           sx={{
-            borderBottom: { md: "none", lg: "4px solid #fff" },
+            borderBottom: { lg: "4px solid #fff" },
           }}
         >
           <Grid item sm={12} md={6} lg={5} sx={{ order: { xs: 0, md: 1 } }}>
