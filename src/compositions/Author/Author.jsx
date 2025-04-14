@@ -1,12 +1,8 @@
 import React from "react";
 import { Box, Container, Paper, Typography, Grid } from "@mui/material";
 
-<<<<<<< HEAD
-import andrei from "./images/akgreen.jpg";
-=======
 import andrei from "./images/akstillsep-nobg.png";
 import code from "./images/code.webp";
->>>>>>> dark
 
 const Author = () => {
   return (
