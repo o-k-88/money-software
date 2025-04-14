@@ -3,7 +3,7 @@ import { Box, Container, Typography, Grid } from "@mui/material";
 import CodeBlock from "../../components/CodeBlock/CodeBlock";
 import TypingEffect from "../../components/TypingEffect/TypingEffect";
 
-import line2 from "./images/line2.svg";
+import line2 from "./images/Line2.svg";
 
 const Intro = () => {
   return (
