@@ -5,9 +5,17 @@ import { navLinks } from "../../helpers/links";
 
 const Footer = () => {
   return (
-    <Box component="footer" sx={{ backgroundColor: "primary.main", color: "white", py: 4 }}>
-      <Container maxWidth="lg">
-        <Grid container spacing={3} justifyContent="center">
+    <Box
+      component="footer"
+      sx={{
+        borderTop: "4px solid #fff",
+        background: "#transparent",
+        color: "white",
+        py: 4,
+      }}
+    >
+      <Container maxWidth="xl">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
           {/* Website Name & Copyright */}
           <Grid item xs={12} md={4} textAlign={{ xs: "center", md: "left" }}>
             <Typography variant="h6" fontWeight="bold">

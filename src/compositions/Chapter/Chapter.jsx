@@ -13,7 +13,32 @@ import { Link } from "react-router-dom";
 
 const TypographyStyle = ({ children }) => {
   return (
-    <Typography variant="body1" sx={{ mb: 2, lineHeight: 1.8 }}>
+    <Typography
+      variant="body1"
+      sx={{
+        mb: 2,
+        lineHeight: 1.8,
+        color: "text.primary",
+        letterSpacing: "0.5px",
+        position: "relative",
+        paddingLeft: "12px",
+
+        // Optional text shadow for a soft effect
+        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.1)",
+
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          left: 0,
+          top: "50%",
+          transform: "translateY(-50%)",
+          width: "4px",
+          height: "80%",
+          background: "linear-gradient(180deg, #ddd, #bbb)",
+          borderRadius: "2px",
+        },
+      }}
+    >
       {children}
     </Typography>
   );
@@ -29,17 +54,18 @@ const Chapter = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ mb: 2 }}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel1-content"
             id="panel1-header"
+            sx={{ bgcolor: "#7169E2" }}
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Preface -- The Big Idea
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+              💡 Preface -- The Big Idea
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               Take a moment and mentally picture money. Your mental image probably looks like a
               colorful piece of paper or a metal disk or a rectangular piece of plastic.
@@ -63,18 +89,23 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
+<<<<<<< HEAD
             <Typography component="span" sx={{ fontWeight: 600 }}>
               📖 Chapter 1 -- What is money?
+=======
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+              💵 Chapter 1 -- What is money?
+>>>>>>> dark
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               Money is really any medium that is commonly accepted to transfer value from the past
               to the present and from the present to the future. This medium can be tangible -
@@ -82,41 +113,34 @@ const Chapter = () => {
               something that human senses cannot process - like an encrypted piece of computer code.
             </TypographyStyle>
 
-            <TypographyStyle>What do humans need money for?</TypographyStyle>
-
             <TypographyStyle>
-              To exchange for something of need or importance to them now or to set aside for
-              something of need or importance to them later. See, it’s human mental time travel
-              again - from the past to the present and from the present to some imagined future.
-            </TypographyStyle>
-            <TypographyStyle>
-              Some of what is considered to be of need or importance to humans stayed the same for
-              millennia and some changed a lot.
-            </TypographyStyle>
-            <TypographyStyle>
-              What stayed the same is commonly referred to as death and taxes. I would also add
-              weddings and debt to that.
+              What do humans need money for?
               <Link
                 style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
-                to="/what-is-money"
+                to="/debt-as-money"
               >
                 Read more...
               </Link>
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
+<<<<<<< HEAD
             <Typography component="span" sx={{ fontWeight: 600 }}>
               📖 Chapter 2 -- Debt as money
+=======
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+              📉 Chapter 2 -- Debt as money
+>>>>>>> dark
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               The US dollar is currently the most widely used money in transactions involving goods
               and services around the world. Let’s take a look at a US dollar bill. On the front of
@@ -140,18 +164,18 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100", mb: 2 }}>
+        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 3 -- Monetary system
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+              🏦 Chapter 3 -- Monetary system
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle variant="body2">
               This sad period lasted for about 400 years. Then, gradually, some of the places in and
               around what is now Greece and coastal areas of the Aegean sea became inhabited again.
@@ -174,7 +198,7 @@ const Chapter = () => {
               counterfeit, and easy to verify without a common language. Metals simply need to be
               weighted, assuming the scales are correct.{" "}
               <Link
-                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
+                style={{ textDecoration: "none", color: "#C9328E", marginLeft: ".5rem" }}
                 to="/monetary-system"
               >
                 Read more...
@@ -182,18 +206,18 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "grey.100" }}>
+        <Accordion sx={{ bgcolor: "#7169E2" }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 9 -- From gold to bitcoin
+            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+              🏅 Chapter 9 -- From gold to bitcoin
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>
               Monetary systems based on metals continued to operate for the next 2500 years - well
               into the 20th century. Gold in particular has proven to be especially well suited for
