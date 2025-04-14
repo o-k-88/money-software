@@ -96,13 +96,8 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-<<<<<<< HEAD
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 1 -- What is money?
-=======
             <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
               💵 Chapter 1 -- What is money?
->>>>>>> dark
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ bgcolor: "grey.100" }}>
@@ -131,13 +126,8 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-<<<<<<< HEAD
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              📖 Chapter 2 -- Debt as money
-=======
             <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
               📉 Chapter 2 -- Debt as money
->>>>>>> dark
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ bgcolor: "grey.100" }}>
