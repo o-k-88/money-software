@@ -4,10 +4,12 @@ import Header from "../compositions/Header/Header";
 import Footer from "../compositions/Footer/Footer";
 import { Box, Container } from "@mui/material";
 import code from "./images/code.webp";
+import CustomCursor from "../components/CustomCursor/CustomCursor";
 
 const Layout = () => {
   return (
     <>
+      <CustomCursor />
       <Box
         component="div"
         className="g-content"

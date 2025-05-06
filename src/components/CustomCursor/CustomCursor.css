@@ -1,0 +1,16 @@
+.custom-cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.line-container div {
+  position: absolute;
+  background: black;
+  height: 2px;
+  pointer-events: none;
+}
