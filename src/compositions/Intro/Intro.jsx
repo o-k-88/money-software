@@ -26,10 +26,6 @@ const Intro = () => {
                   fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" },
                   letterSpacing: "1.5px",
                   textTransform: "uppercase",
-                  backgroundImage: "linear-gradient(45deg, #00FF00, #00AA00)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  textShadow: "4px 4px 10px rgba(0, 255, 0, 0.5)",
                   mb: { xs: 4, md: 6 },
                   position: "relative",
                   "&::after": {
@@ -37,7 +33,7 @@ const Intro = () => {
                     display: "block",
                     width: "50%",
                     height: "4px",
-                    backgroundColor: "#00FF00",
+                    backgroundColor: "#000",
                     position: "absolute",
                     bottom: "-8px",
                     left: "0",
@@ -47,10 +43,12 @@ const Intro = () => {
               >
                 Money is Software
               </Typography>
-              <TypingEffect
-                text="This book is about the biggest transformation of wealth in modern times - one where the future is dictated by lines of code. Do not be left behind."
-                speed={20}
-              />
+              <Typography
+                sx={{ mb: 4, fontSize: { xs: "1.2rem", sm: "1.5rem" }, color: "#747373" }}
+              >
+                This book is about the biggest transformation of wealth in modern times - one where
+                the future is dictated by lines of code. Do not be left behind.
+              </Typography>
               <Box
                 component="img"
                 src={line2}

@@ -33,11 +33,11 @@ const CodeBlock = () => {
   return (
     <Box
       sx={{
-        borderRadius: 4,
+        borderRadius: 10,
         fontSize: { xs: "0.7rem", sm: "1rem", md: "1rem", xl: "1.2rem" },
       }}
     >
-      <SyntaxHighlighter language="javascript" style={funky} showLineNumbers>
+      <SyntaxHighlighter language="javascript" style={materialOceanic} showLineNumbers>
         {codeString}
       </SyntaxHighlighter>
     </Box>

@@ -23,7 +23,7 @@ const Author = () => {
           justifyContent="space-between"
           alignItems="center"
           sx={{
-            borderBottom: { lg: "4px solid #fff" },
+            borderBottom: { lg: "4px solid #000" },
           }}
         >
           <Grid item sm={12} md={6} lg={5} sx={{ order: { xs: 0, md: 1 } }}>
@@ -39,7 +39,7 @@ const Author = () => {
             />
           </Grid>
           <Grid item sm={12} md={6} lg={7}>
-            <Box sx={{ color: "#fff" }}>
+            <Box sx={{ color: "#000" }}>
               <Typography
                 variant="h2"
                 sx={{
@@ -50,7 +50,7 @@ const Author = () => {
                   // Gradient text effect
                   backgroundImage: "linear-gradient(90deg, #ffffff, #e0e0e0)",
                   WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  // WebkitTextFillColor: "transparent",
                   textShadow: "3px 3px 8px rgba(255, 255, 255, 0.3)",
                 }}
               >

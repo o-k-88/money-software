@@ -25,7 +25,7 @@ const TypingEffect = ({ text, speed = 100, textColor }) => {
       variant="h2"
       sx={{
         mb: { xs: 4, sm: 2 },
-        color: textColor || "white",
+        // color: textColor || "white",
         lineHeight: 1.6,
         fontSize: { xs: "1.2rem", sm: "1.5rem" },
         fontWeight: 700,
@@ -37,7 +37,7 @@ const TypingEffect = ({ text, speed = 100, textColor }) => {
         // Optional gradient text effect
         backgroundImage: "linear-gradient(90deg, #ffffff, #f0f0f0, #d9d9d9)",
         WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
+        // WebkitTextFillColor: "transparent",
       }}
     >
       {displayedText}

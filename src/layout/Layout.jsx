@@ -14,7 +14,7 @@ const Layout = () => {
         sx={{
           position: "relative",
           overflow: "hidden",
-          background: "linear-gradient(135deg, #16172E 0%, #3A3B5F 100%)",
+          // background: "linear-gradient(135deg, #16172E 0%, #3A3B5F 100%)",
 
           // backgroundImage: `url(${code})`,
           // backgroundSize: "cover",

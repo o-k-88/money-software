@@ -8,9 +8,9 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        borderTop: "4px solid #fff",
+        borderTop: "4px solid #000",
         background: "#transparent",
-        color: "white",
+        color: "#000",
         py: 4,
       }}
     >
