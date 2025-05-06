@@ -11,10 +11,6 @@ const Author = () => {
       id="author"
       sx={{
         py: { xs: 6, md: 10 },
-        // backgroundImage: `url(${code})`,
-        // backgroundSize: "cover",
-        // backgroundPosition: "center",
-        // backgroundRepeat: "no-repeat",
       }}
     >
       <Container maxWidth="xl">
@@ -40,61 +36,31 @@ const Author = () => {
           </Grid>
           <Grid item sm={12} md={6} lg={7}>
             <Box sx={{ color: "#000" }}>
-              <Typography
-                variant="h2"
-                sx={{
-                  fontWeight: 700,
-                  fontSize: { xs: "2.2rem", md: "3.5rem" },
-                  letterSpacing: "1.8px",
-
-                  // Gradient text effect
-                  backgroundImage: "linear-gradient(90deg, #ffffff, #e0e0e0)",
-                  WebkitBackgroundClip: "text",
-                  // WebkitTextFillColor: "transparent",
-                  textShadow: "3px 3px 8px rgba(255, 255, 255, 0.3)",
-                }}
-              >
+              <Typography variant="h2" sx={{ fontWeight: 600 }}>
                 Andrei Kirilenko
               </Typography>
 
-              <Typography
-                variant="h5"
-                sx={{
-                  fontWeight: 500,
-                  fontSize: { xs: "1.5rem", md: "2rem" },
-
-                  position: "relative",
-                  mb: 2,
-                }}
-              >
+              <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 600 }}>
                 Professor of Finance
               </Typography>
 
-              <Typography
-                sx={{
-                  fontWeight: 400,
-                  fontSize: { xs: "1.2rem", md: "1.6rem" },
-
-                  mb: 3,
-                  textShadow: "1px 1px 3px rgba(255, 255, 255, 0.2)",
-                }}
-              >
+              <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 4, fontWeight: 600 }}>
                 Cambridge Judge Business School
               </Typography>
 
-              <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 2 }}>
+              <Typography variant="body2" sx={{ lineHeight: 1.8, mb: 2, fontWeight: 600 }}>
                 Andrei Kirilenko is a Professor of Finance at the Cambridge Judge Business School
                 and the Founding Director of the Cambridge Centre for Finance, Technology, and
                 Regulation. He was previously a professor at MIT Sloan and Imperial College Business
                 School.
               </Typography>
 
-              <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 2 }}>
+              <Typography variant="body2" sx={{ lineHeight: 1.8, mb: 2, fontWeight: 600 }}>
                 After the Global Financial Crisis, he served as Chief Economist of the U.S.
                 Commodity Futures Trading Commission (CFTC), where he received the CFTC Chairman's
                 Award for Excellence (highest honor).
               </Typography>
-              <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
+              <Typography variant="body2" sx={{ lineHeight: 1.8, mb: 2, fontWeight: 600 }}>
                 Andrei holds a PhD in Economics from the University of Pennsylvania with a
                 specialization in Finance from the Wharton School.
               </Typography>
