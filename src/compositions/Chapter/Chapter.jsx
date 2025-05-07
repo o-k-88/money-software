@@ -22,7 +22,7 @@ const TypographyStyle = ({ children }) => {
         letterSpacing: "0.5px",
         position: "relative",
         paddingLeft: "12px",
-        fontSize: "28px",
+        fontSize: "16px",
 
         "&::before": {
           content: '""',
@@ -37,6 +37,14 @@ const TypographyStyle = ({ children }) => {
         },
       }}
     >
+      {children}
+    </Typography>
+  );
+};
+
+const TypographyHeader = ({ children }) => {
+  return (
+    <Typography component="span" sx={{ fontWeight: 600, fontSize: "16px" }}>
       {children}
     </Typography>
   );
@@ -58,9 +66,7 @@ const Chapter = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
-              Preface -- The Big Idea
-            </Typography>
+            <TypographyHeader>Preface -- The Big Idea</TypographyHeader>
           </AccordionSummary>
           <AccordionDetails>
             <TypographyStyle>
@@ -93,9 +99,7 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
-              Chapter 1 -- What is money?
-            </Typography>
+            <TypographyHeader>Chapter 1 -- What is money?</TypographyHeader>
           </AccordionSummary>
           <AccordionDetails>
             <TypographyStyle>
@@ -109,7 +113,7 @@ const Chapter = () => {
               What do humans need money for?
               <Link
                 style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
-                to="/debt-as-money"
+                to="/what-is-money"
               >
                 Read more...
               </Link>
@@ -123,9 +127,7 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
-              Chapter 2 -- Debt as money
-            </Typography>
+            <TypographyHeader>Chapter 2 -- Debt as money</TypographyHeader>
           </AccordionSummary>
           <AccordionDetails>
             <TypographyStyle>
@@ -144,7 +146,7 @@ const Chapter = () => {
               liable for.
               <Link
                 style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
-                to="/debt-as-money"
+                to="/debt"
               >
                 Read more...
               </Link>
@@ -158,9 +160,7 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
-              Chapter 3 -- Monetary system
-            </Typography>
+            <TypographyHeader>Chapter 3 -- Monetary system</TypographyHeader>
           </AccordionSummary>
           <AccordionDetails>
             <TypographyStyle variant="body2">
@@ -200,9 +200,7 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
-              Chapter 9 -- From gold to bitcoin
-            </Typography>
+            <TypographyHeader>Chapter 9 -- From gold to bitcoin</TypographyHeader>
           </AccordionSummary>
           <AccordionDetails sx={{ bgcolor: "grey.100" }}>
             <TypographyStyle>

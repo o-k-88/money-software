@@ -41,31 +41,31 @@ const Author = () => {
 
               <Typography
                 variant="body1"
-                sx={{ lineHeight: 1.8, fontWeight: 600, fontSize: "28px" }}
+                sx={{ lineHeight: 1.8, fontWeight: 600, fontSize: "24px" }}
               >
                 Professor of Finance
               </Typography>
 
               <Typography
                 variant="body1"
-                sx={{ lineHeight: 1.8, mb: 4, fontWeight: 600, fontSize: "28px" }}
+                sx={{ lineHeight: 1.8, mb: 4, fontWeight: 600, fontSize: "24px" }}
               >
                 Cambridge Judge Business School
               </Typography>
 
-              <Typography sx={{ mb: 2, fontSize: "28px" }}>
+              <Typography sx={{ mb: 2, fontSize: "16px", lineHeight: 1.8 }}>
                 Andrei Kirilenko is a Professor of Finance at the Cambridge Judge Business School
                 and the Founding Director of the Cambridge Centre for Finance, Technology, and
                 Regulation. He was previously a professor at MIT Sloan and Imperial College Business
                 School.
               </Typography>
 
-              <Typography sx={{ mb: 2, fontSize: "28px" }}>
+              <Typography sx={{ mb: 2, fontSize: "16px", lineHeight: 1.8 }}>
                 After the Global Financial Crisis, he served as Chief Economist of the U.S.
                 Commodity Futures Trading Commission (CFTC), where he received the CFTC Chairman's
                 Award for Excellence (highest honor).
               </Typography>
-              <Typography sx={{ mb: 2, fontSize: "28px" }}>
+              <Typography sx={{ mb: 2, fontSize: "16px", lineHeight: 1.8 }}>
                 Andrei holds a PhD in Economics from the University of Pennsylvania with a
                 specialization in Finance from the Wharton School.
               </Typography>
