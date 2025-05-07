@@ -22,6 +22,7 @@ const TypographyStyle = ({ children }) => {
         letterSpacing: "0.5px",
         position: "relative",
         paddingLeft: "12px",
+        fontSize: "28px",
 
         "&::before": {
           content: '""',
@@ -57,8 +58,8 @@ const Chapter = () => {
             aria-controls="panel1-content"
             id="panel1-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              💡 Preface -- The Big Idea
+            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
+              Preface -- The Big Idea
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -92,8 +93,8 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              💵 Chapter 1 -- What is money?
+            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
+              Chapter 1 -- What is money?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -122,8 +123,8 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              📉 Chapter 2 -- Debt as money
+            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
+              Chapter 2 -- Debt as money
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -157,8 +158,8 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              🏦 Chapter 3 -- Monetary system
+            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
+              Chapter 3 -- Monetary system
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -199,8 +200,8 @@ const Chapter = () => {
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600 }}>
-              🏅 Chapter 9 -- From gold to bitcoin
+            <Typography component="span" sx={{ fontWeight: 600, fontSize: "28px" }}>
+              Chapter 9 -- From gold to bitcoin
             </Typography>
           </AccordionSummary>
           <AccordionDetails sx={{ bgcolor: "grey.100" }}>

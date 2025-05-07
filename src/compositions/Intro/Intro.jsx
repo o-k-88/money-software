@@ -46,7 +46,7 @@ const Intro = () => {
               <Typography
                 sx={{
                   mb: 4,
-                  fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                  fontSize: { xs: "1.2rem", sm: "1.750rem" },
                   color: "#000",
                   // textTransform: "uppercase",
                 }}
