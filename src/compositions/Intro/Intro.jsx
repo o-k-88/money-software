@@ -48,7 +48,7 @@ const Intro = () => {
                   mb: 4,
                   fontSize: { xs: "1.2rem", sm: "1.5rem" },
                   color: "#000",
-                  textTransform: "uppercase",
+                  // textTransform: "uppercase",
                 }}
               >
                 This book is about the biggest transformation of wealth in modern times - one where

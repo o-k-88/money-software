@@ -7,18 +7,10 @@ import image3 from "./images/image-03.jpeg";
 const LayoutPage = () => {
   return (
     <>
-      <Box
-        component="main"
-        sx={{
-          position: "relative",
-          overflow: "hidden",
-          py: { xs: 6, md: 12 },
-          background: `url(${image3}) no-repeat top center`,
-          backgroundSize: "cover",
-          color: "#fff",
-        }}
-      >
-        <Outlet />
+      <Box component="main">
+        <Box component="section" sx={{ py: { xs: 6, md: 12 } }}>
+          <Outlet />
+        </Box>
       </Box>
       <Footer />
     </>
