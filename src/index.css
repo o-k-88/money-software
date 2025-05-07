@@ -132,9 +132,9 @@ html {
   scroll-behavior: smooth;
 }
 
-section:nth-of-type(odd) {
+/* section:nth-of-type(odd) {
   background-color: rgb(233, 233, 233);
-}
+} */
 
 /* @font-face {
   font-family: "Consolas";
