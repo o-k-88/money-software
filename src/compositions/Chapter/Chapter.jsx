@@ -202,7 +202,7 @@ const Chapter = () => {
           >
             <TypographyHeader>Chapter 9 -- From gold to bitcoin</TypographyHeader>
           </AccordionSummary>
-          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
+          <AccordionDetails>
             <TypographyStyle>
               Monetary systems based on metals continued to operate for the next 2500 years - well
               into the 20th century. Gold in particular has proven to be especially well suited for
