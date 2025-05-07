@@ -7,7 +7,7 @@ import { createTheme, ThemeProvider, CssBaseline, Typography } from "@mui/materi
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Consolas, 'Courier New', monospace",
+    // fontFamily: "Consolas, 'Courier New', monospace",
   },
   palette: {
     primary: {

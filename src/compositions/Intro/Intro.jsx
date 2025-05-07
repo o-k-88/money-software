@@ -43,7 +43,14 @@ const Intro = () => {
               >
                 Money is Software
               </Typography>
-              <Typography sx={{ mb: 4, fontSize: { xs: "1.2rem", sm: "1.5rem" }, color: "#000" }}>
+              <Typography
+                sx={{
+                  mb: 4,
+                  fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                  color: "#000",
+                  textTransform: "uppercase",
+                }}
+              >
                 This book is about the biggest transformation of wealth in modern times - one where
                 the future is dictated by lines of code. Do not be left behind.
               </Typography>

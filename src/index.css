@@ -132,6 +132,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section:nth-of-type(odd) {
+  background-color: rgb(233, 233, 233);
+}
+
 /* @font-face {
   font-family: "Consolas";
   src: url("./fonts/Consolas.woff2") format("woff2");

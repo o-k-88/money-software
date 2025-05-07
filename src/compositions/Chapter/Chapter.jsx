@@ -23,9 +23,6 @@ const TypographyStyle = ({ children }) => {
         position: "relative",
         paddingLeft: "12px",
 
-        // Optional text shadow for a soft effect
-        textShadow: "1px 1px 3px rgba(0, 0, 0, 0.1)",
-
         "&::before": {
           content: '""',
           position: "absolute",
@@ -56,16 +53,15 @@ const Chapter = () => {
       <Container maxWidth="xl">
         <Accordion sx={{ mb: 2 }}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#000" }} />}
             aria-controls="panel1-content"
             id="panel1-header"
-            sx={{ bgcolor: "#7169E2" }}
           >
-            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+            <Typography component="span" sx={{ fontWeight: 600 }}>
               💡 Preface -- The Big Idea
             </Typography>
           </AccordionSummary>
-          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
+          <AccordionDetails>
             <TypographyStyle>
               Take a moment and mentally picture money. Your mental image probably looks like a
               colorful piece of paper or a metal disk or a rectangular piece of plastic.
@@ -89,18 +85,18 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
+        <Accordion sx={{ mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#000" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+            <Typography component="span" sx={{ fontWeight: 600 }}>
               💵 Chapter 1 -- What is money?
             </Typography>
           </AccordionSummary>
-          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
+          <AccordionDetails>
             <TypographyStyle>
               Money is really any medium that is commonly accepted to transfer value from the past
               to the present and from the present to the future. This medium can be tangible -
@@ -119,18 +115,18 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
+        <Accordion sx={{ mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#000" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+            <Typography component="span" sx={{ fontWeight: 600 }}>
               📉 Chapter 2 -- Debt as money
             </Typography>
           </AccordionSummary>
-          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
+          <AccordionDetails>
             <TypographyStyle>
               The US dollar is currently the most widely used money in transactions involving goods
               and services around the world. Let’s take a look at a US dollar bill. On the front of
@@ -154,18 +150,18 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "#7169E2", mb: 2 }}>
+        <Accordion sx={{ mb: 2 }}>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#000" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+            <Typography component="span" sx={{ fontWeight: 600 }}>
               🏦 Chapter 3 -- Monetary system
             </Typography>
           </AccordionSummary>
-          <AccordionDetails sx={{ bgcolor: "grey.100" }}>
+          <AccordionDetails>
             <TypographyStyle variant="body2">
               This sad period lasted for about 400 years. Then, gradually, some of the places in and
               around what is now Greece and coastal areas of the Aegean sea became inhabited again.
@@ -186,9 +182,9 @@ const Chapter = () => {
               centuries, especially for international trade, it was common to use gold or silver as
               a common currency. Gold and silver are durable, could be quickly hidden, hard to
               counterfeit, and easy to verify without a common language. Metals simply need to be
-              weighted, assuming the scales are correct.{" "}
+              weighted, assuming the scales are correct.
               <Link
-                style={{ textDecoration: "none", color: "#C9328E", marginLeft: ".5rem" }}
+                style={{ textDecoration: "none", color: "#CE5214", marginLeft: ".5rem" }}
                 to="/monetary-system"
               >
                 Read more...
@@ -196,14 +192,14 @@ const Chapter = () => {
             </TypographyStyle>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ bgcolor: "#7169E2" }}>
+        <Accordion>
           {/* Light background */}
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#000" }} />}
             aria-controls="panel2-content"
             id="panel2-header"
           >
-            <Typography component="span" sx={{ fontWeight: 600, color: "#fff" }}>
+            <Typography component="span" sx={{ fontWeight: 600 }}>
               🏅 Chapter 9 -- From gold to bitcoin
             </Typography>
           </AccordionSummary>
