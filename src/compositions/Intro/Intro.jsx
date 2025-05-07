@@ -28,6 +28,7 @@ const Intro = () => {
                   textTransform: "uppercase",
                   mb: { xs: 4, md: 6 },
                   position: "relative",
+                  textAlign: "center",
                   "&::after": {
                     content: '""',
                     display: "block",
@@ -36,7 +37,7 @@ const Intro = () => {
                     backgroundColor: "#000",
                     position: "absolute",
                     bottom: "-8px",
-                    left: "0",
+                    left: "25%",
                     borderRadius: "2px",
                   },
                 }}
