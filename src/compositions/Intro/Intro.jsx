@@ -28,7 +28,7 @@ const Intro = () => {
                   textTransform: "uppercase",
                   mb: { xs: 4, md: 6 },
                   position: "relative",
-                  textAlign: "center",
+                  textAlign: { xs: "center", md: "left" },
                   "&::after": {
                     content: '""',
                     display: "block",
@@ -37,7 +37,7 @@ const Intro = () => {
                     backgroundColor: "#000",
                     position: "absolute",
                     bottom: "-8px",
-                    left: "25%",
+                    left: { xs: "25%", md: "0" },
                     borderRadius: "2px",
                   },
                 }}
@@ -49,7 +49,7 @@ const Intro = () => {
                   mb: 4,
                   fontSize: { xs: "1.2rem", sm: "1.750rem" },
                   color: "#000",
-                  // textTransform: "uppercase",
+                  textAlign: { xs: "center", md: "left" },
                 }}
               >
                 This book is about the biggest transformation of wealth in modern times - one where
