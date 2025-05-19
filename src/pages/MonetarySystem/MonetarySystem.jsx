@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Typography, Paper, Box } from "@mui/material";
 import TypographyStylePage from "../../components/TypographyStylePage/TypographyStylePage";
+import GoBack from "../../components/GoBack/GoBack";
 const MonetarySystem = () => {
   return (
     <Container maxWidth="lg">
@@ -82,6 +83,7 @@ const MonetarySystem = () => {
           Around 550 BCE, Lydia was annexed by Persia giving rise a fundamental conflict between the
           freedom-loving Greeks and the authority-abiding Persians.
         </TypographyStylePage>
+        <GoBack />
       </Box>
     </Container>
   );

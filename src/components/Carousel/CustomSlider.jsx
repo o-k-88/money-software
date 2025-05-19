@@ -60,7 +60,7 @@ const CustomSlider = ({ feedbacks }) => {
               subheader="March 21, 2025"
               subheaderTypographyProps={{ sx: { color: "#fff" } }} // Change subheader color
               sx={{
-                bgcolor: "primary.main",
+                bgcolor: "#F28C28",
                 color: "white",
 
                 textAlign: "center",
