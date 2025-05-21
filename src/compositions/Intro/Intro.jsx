@@ -44,17 +44,12 @@ const Intro = () => {
               >
                 Money is Software
               </Typography>
-              <Typography
-                sx={{
-                  mb: 4,
-                  fontSize: { xs: "1.2rem", sm: "1.750rem" },
-                  color: "#000",
-                  textAlign: { xs: "center", md: "left" },
-                }}
-              >
-                This book is about the biggest transformation of wealth in modern times - one where
-                the future is dictated by lines of code. Do not be left behind.
-              </Typography>
+              <TypingEffect
+                text={
+                  "   This book is about the biggest transformation of wealth in modern times - one where the future is dictated by lines of code. Do not be left behind."
+                }
+                speed={50}
+              ></TypingEffect>
               <Box
                 component="img"
                 src={line2}
